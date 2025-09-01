@@ -1,0 +1,88 @@
+Prompt para Agente IA Replit – Criação de Site MedGrowth
+Objetivo:
+Criar um site completo, responsivo e de alta conversão para a MedGrowth. Design moderno, clean e minimalista (sem futurismos exagerados), com copy persuasiva que destaque diferenciais e leve o médico a entrar em contato.
+Estrutura da Landing Page
+1. Cabeçalho (Header)
+Logo minimalista (cores da marca).
+Nome da marca: MedGrowth.
+Slogan: Crescer Juntos – Sua autoridade digital, nosso compromisso.
+Menu: Home | Quem Somos | Serviços | Casos de Sucesso | Contato.
+Botão fixo de contato: "Fale Conosco Agora" → WhatsApp (61) 99630-1406.
+2. Hero Section (Seção Principal)
+Fundo: espaço para vídeo curto abstrato (elementos médicos + digitais, nas cores da marca).
+Título: “MedGrowth: Sua Jornada para o Sucesso Digital Começa Aqui.”
+Subtítulo: “Cansado de pacotes prontos? Nós criamos estratégias personalizadas para você focar no que realmente importa: seus pacientes.”
+CTA (botão destacado #35ccdb): "Solicite Sua Análise Gratuita".
+3. Quem Somos
+Título: “Sua Parceria Estratégica no Digital.”
+Texto:
+A MedGrowth nasceu para revolucionar o marketing médico. Atuamos como extensão digital da sua clínica, cuidando da sua autoridade online com estratégias sob medida. Ética, inovação, resultados reais e parceria de longo prazo.
+4. Serviços
+Título: “Soluções Digitais que Geram Resultados Reais.”
+Destaque: Produto 360 Médico – pacote completo (identidade visual, site, redes sociais, tráfego pago, branding e suporte contínuo).
+Lista de serviços complementares com benefício prático para o médico:
+Gestão de redes sociais: engaje pacientes e construa autoridade.
+Tráfego pago: atraia pacientes qualificados imediatamente.
+Branding e identidade visual: torne-se memorável no digital.
+Automações com IA: ganhe tempo com processos inteligentes.
+5. Depoimentos
+Título: “Médicos que Transformaram Suas Carreiras com a MedGrowth.”
+Espaço para inserir depoimentos de clientes (placeholder).
+Layout clean, fundo claro, reforçando credibilidade.
+6. Casos de Sucesso
+Título: “Resultados Comprovados: Nossas Histórias de Sucesso.”
+Espaço para mostrar antes/depois, gráficos ou prints (placeholder).
+Layout objetivo e visualmente impactante.
+7. CTA Final (Orçamento)
+Título: “Não Deixe Seu Potencial Digital Esperar. Fale Conosco!”
+Texto:
+Sua rotina é corrida. Deixe que especialistas cuidem da sua presença online enquanto você cuida dos pacientes.
+Botão (cor #35ccdb): “Quero Minha Análise Gratuita” → WhatsApp (61) 99630-1406.
+8. Rodapé (Footer)
+Contato: Atendimento 24h via WhatsApp (61) 99630-1406.
+Redes sociais: link para Instagram.
+Navegação repetida: Home, Serviços, Casos de Sucesso, Contato.
+Direitos autorais: © [Ano Atual] MedGrowth. Construindo o futuro digital da medicina.
+Diretrizes Profissionais de UX/UI
+Estilo Visual
+Clean e minimalista, com flat design.
+Evitar 3D, gradientes exagerados e poluição visual.
+Uso consistente das cores institucionais.
+Tipografia
+Títulos: Helvetica Now Display (impacto e destaque).
+Subtítulos e corpo: Rethink Sans (moderno, legível e institucional).
+Máx. 3 níveis de texto: Título, Subtítulo, Corpo.
+Espaçamento confortável e leitura fluida.
+Ícones
+Estilo flat, vetoriais, monocromáticos.
+Utilizar azul escuro ou ciano, dependendo do fundo.
+Aplicação: serviços, contato, valores.
+Nunca usar emoji ou ícones 3D.
+Navegação
+Menu fixo (sticky), com CTA do WhatsApp em destaque.
+Scroll suave.
+No mobile: menu hambúrguer minimalista.
+CTAs
+Botões flat, cor principal ciano (#35ccdb).
+Hover: leve variação de tom.
+Texto direto e persuasivo.
+Layout
+Quem Somos: texto + ícone/imagem institucional.
+Serviços: grid com cards (ícone + título + benefício).
+Depoimentos: carrossel ou cards.
+Casos de Sucesso: comparação visual (antes/depois, gráficos).
+CTA final: fundo escuro, botão claro destacado.
+Responsividade
+Mobile-first.
+Cards em colunas únicas no mobile, grids no desktop.
+Textos centralizados em telas pequenas.
+Acessibilidade
+Contraste forte (texto vs fundo).
+Botões com rótulos claros.
+Fontes no mínimo 16px para corpo.
+Ícones sempre acompanhados de legenda/texto.
+Observações ao Agente IA
+Priorizar copy persuasiva, clara e acolhedora.
+Hierarquia visual bem definida em todas as seções.
+Espaços de depoimentos e portfólio devem ser placeholders editáveis.
+CTAs destacados e repetidos estrategicamente.
