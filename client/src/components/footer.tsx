@@ -16,10 +16,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4" data-testid="footer-logo">
-              <div className="w-8 h-8 bg-medgrowth-cyan rounded-lg flex items-center justify-center">
-                <Heart className="text-white w-5 h-5" />
-              </div>
+            <div className="flex items-center space-x-3 mb-4" data-testid="footer-logo">
+              <img 
+                src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
+                alt="MedGrowth Logo"
+                className="h-10 w-auto"
+              />
               <div>
                 <h3 className="text-xl font-bold">MedGrowth</h3>
                 <p className="text-sm opacity-80">Crescer Juntos</p>
