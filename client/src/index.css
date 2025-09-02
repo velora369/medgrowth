@@ -108,6 +108,38 @@
       linear-gradient(135deg, rgba(4, 68, 90, 0.8) 0%, rgba(236, 245, 242, 0.95) 40%, rgba(236, 245, 242, 0.95) 60%, rgba(4, 68, 90, 0.7) 100%);
   }
 
+  /* Animações de entrada suaves */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-1 {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-2 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .fade-in-up-delay-3 {
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .modern-nav {
     backdrop-filter: blur(16px);
     background: rgba(255, 255, 255, 0.85);
@@ -121,9 +153,23 @@
   }
 
   .service-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(4, 68, 90, 0.15), 0 10px 20px rgba(53, 204, 219, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+
+  /* Microinterações modernas */
+  .glow-on-hover:hover {
+    box-shadow: 0 0 30px rgba(53, 204, 219, 0.3);
+  }
+
+  .scale-on-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
   }
 
   .mobile-menu {

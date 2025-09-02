@@ -56,18 +56,19 @@ export default function ServicesSection() {
   return (
     <section id="servicos" className="py-20 bg-medgrowth-light">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-medgrowth-dark" data-testid="services-title">
-            Soluções Digitais que Geram Resultados Reais
+        <div className="text-center mb-16 fade-in-up">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-medgrowth-dark leading-tight" data-testid="services-title">
+            Soluções Digitais que Geram<br />
+            <span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Resultados Reais</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="services-subtitle">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium" data-testid="services-subtitle">
             Estratégias sob medida para médicos que buscam crescimento sustentável e autoridade digital
           </p>
         </div>
 
         {/* Featured Service - 360 Medical Package */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark p-8 rounded-2xl text-white text-center service-card" data-testid="featured-service">
+        <div className="max-w-4xl mx-auto mb-16 fade-in-up-delay-1">
+          <div className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark p-8 md:p-12 rounded-3xl text-white text-center service-card shadow-2xl" data-testid="featured-service">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-6">
               <Globe className="text-medgrowth-cyan w-8 h-8" />
             </div>
@@ -89,9 +90,9 @@ export default function ServicesSection() {
         </div>
 
         {/* Additional Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <Dialog>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all service-card" data-testid="service-social-media">
+            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-2 border border-medgrowth-cyan/10" data-testid="service-social-media">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Instagram className="text-medgrowth-cyan w-6 h-6" />
               </div>
@@ -155,7 +156,7 @@ export default function ServicesSection() {
           </Dialog>
 
           <Dialog>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all service-card" data-testid="service-paid-traffic">
+            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-3 border border-medgrowth-cyan/10" data-testid="service-paid-traffic">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Megaphone className="text-medgrowth-cyan w-6 h-6" />
               </div>
@@ -171,37 +172,48 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
-                      <Megaphone className="text-medgrowth-cyan w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-medgrowth-dark">{serviceDetails.traffic.title}</h3>
+            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogTitle className="sr-only">{serviceDetails.traffic.title}</DialogTitle>
+              <DialogDescription className="sr-only">{serviceDetails.traffic.description}</DialogDescription>
+              <div className="p-8">
+                <div className="flex items-center space-x-4 mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
+                    <Megaphone className="text-white w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.traffic.title}</h3>
+                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{serviceDetails.traffic.description}</p>
+                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.traffic.description}</p>
+                </div>
                 <div className="mb-8">
-                  <h4 className="font-semibold text-medgrowth-dark mb-4">O que está incluso:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
+                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
+                    O que está incluso:
+                  </h4>
+                  <div className="grid gap-3">
                     {serviceDetails.traffic.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-medgrowth-cyan rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-600">{benefit}</span>
-                      </li>
+                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
+                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                        <span className="text-gray-700 font-medium">{benefit}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
                 <a
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Tráfego Pago para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all w-full justify-center"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
                   data-testid="traffic-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-lg"></i>
+                  <i className="fab fa-whatsapp text-xl"></i>
                   <span>Falar com Especialista</span>
+                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>
@@ -224,37 +236,48 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
-                      <Palette className="text-medgrowth-cyan w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-medgrowth-dark">{serviceDetails.branding.title}</h3>
+            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogTitle className="sr-only">{serviceDetails.branding.title}</DialogTitle>
+              <DialogDescription className="sr-only">{serviceDetails.branding.description}</DialogDescription>
+              <div className="p-8">
+                <div className="flex items-center space-x-4 mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
+                    <Palette className="text-white w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.branding.title}</h3>
+                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{serviceDetails.branding.description}</p>
+                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.branding.description}</p>
+                </div>
                 <div className="mb-8">
-                  <h4 className="font-semibold text-medgrowth-dark mb-4">O que está incluso:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
+                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
+                    O que está incluso:
+                  </h4>
+                  <div className="grid gap-3">
                     {serviceDetails.branding.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-medgrowth-cyan rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-600">{benefit}</span>
-                      </li>
+                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
+                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                        <span className="text-gray-700 font-medium">{benefit}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
                 <a
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Branding e Identidade para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all w-full justify-center"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
                   data-testid="branding-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-lg"></i>
+                  <i className="fab fa-whatsapp text-xl"></i>
                   <span>Falar com Especialista</span>
+                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>
@@ -277,37 +300,48 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
-                      <Bot className="text-medgrowth-cyan w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-medgrowth-dark">{serviceDetails.ai.title}</h3>
+            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogTitle className="sr-only">{serviceDetails.ai.title}</DialogTitle>
+              <DialogDescription className="sr-only">{serviceDetails.ai.description}</DialogDescription>
+              <div className="p-8">
+                <div className="flex items-center space-x-4 mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
+                    <Bot className="text-white w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.ai.title}</h3>
+                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{serviceDetails.ai.description}</p>
+                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.ai.description}</p>
+                </div>
                 <div className="mb-8">
-                  <h4 className="font-semibold text-medgrowth-dark mb-4">O que está incluso:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
+                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
+                    O que está incluso:
+                  </h4>
+                  <div className="grid gap-3">
                     {serviceDetails.ai.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-medgrowth-cyan rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-600">{benefit}</span>
-                      </li>
+                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
+                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                        <span className="text-gray-700 font-medium">{benefit}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
                 <a
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Automações com IA para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all w-full justify-center"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
                   data-testid="ai-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-lg"></i>
+                  <i className="fab fa-whatsapp text-xl"></i>
                   <span>Falar com Especialista</span>
+                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>

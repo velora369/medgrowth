@@ -4,25 +4,27 @@ export default function HeroSection() {
   return (
     <section id="home" className="hero-video-bg min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" data-testid="hero-title">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight fade-in-up" data-testid="hero-title">
           <span className="text-medgrowth-dark">MedGrowth:</span> Sua Jornada para o<br />
-          <span className="text-medgrowth-cyan">Sucesso Digital</span> Começa Aqui
+          <span className="text-medgrowth-cyan bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Sucesso Digital</span> Começa Aqui
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="hero-subtitle">
-          Cansado de pacotes prontos? Nós criamos estratégias personalizadas para você focar no que realmente importa: <strong>seus pacientes</strong>.
+        <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed fade-in-up-delay-1 font-medium" data-testid="hero-subtitle">
+          Cansado de pacotes prontos? Nós criamos estratégias personalizadas para você focar no que realmente importa: <strong className="text-medgrowth-dark">seus pacientes</strong>.
         </p>
 
-        <a
-          href="https://wa.me/5561996301406"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center space-x-3 bg-medgrowth-cyan text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all cta-button shadow-lg"
-          data-testid="hero-cta-button"
-        >
-          <TrendingUp className="w-5 h-5" />
-          <span>Solicite Sua Análise Gratuita</span>
-        </a>
+        <div className="fade-in-up-delay-2">
+          <a
+            href="https://wa.me/5561996301406"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-10 py-5 rounded-2xl text-xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 glow-on-hover"
+            data-testid="hero-cta-button"
+          >
+            <TrendingUp className="w-6 h-6" />
+            <span>Solicite Sua Análise Gratuita</span>
+          </a>
+        </div>
       </div>
     </section>
   );

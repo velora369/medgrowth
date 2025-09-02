@@ -1,0 +1,34 @@
+1. Navegação e Experiência de Usuário (UX):
+* Crie uma navegação ultra fluida, com menus intuitivos e transições suaves entre seções.
+* A experiência de usuário deve ser natural, sem pontos de fricção, focada em minimizar cliques desnecessários.
+* Implementar barra de navegação sticky e âncoras internas para navegação fluida entre tópicos.
+1. Interface de Usuário (UI) Moderna
+* Layout visualmente limpo, minimalista e elegante.
+* Inspiração em tendências de design moderno suave, utilizando espaços em branco de forma inteligente.
+* Elementos visuais arredondados, sombras suaves, texturas leves e gradientes discretos.
+* Estilo suave e consistente: sem excesso de brilho, mantendo o tom moderno e minimalista.
+1. Responsividade e Performance:
+* Design 100% responsivo para celulares, tablets e desktops.
+* Garanta que a velocidade de carregamento seja otimizada sem sacrificar qualidade visual (uso de imagens e assets otimizados).
+* Layout adaptativo para telas menores, reorganizando elementos de forma estratégica para preservar a estética e a funcionalidade.
+1. Paleta de Cores e Identidade Visual:
+* Utilizar a paleta oficial da marca em todos os elementos (tipografia, botões, backgrounds, ícones e emoticons).
+* Se necessário, gerar variações da paleta para hover states, seleções e animações.
+1. Tipografia Moderna e Legível:
+* Contraste forte entre títulos e textos para criar hierarquia visual clara.
+* Fontes alternativas para chamadas ou destaques importantes (se aplicável).
+1. Elementos Animados e Interações Suaves:
+* Aplicar animações de entrada suaves (fade in, slide up) entre seções e cards.
+* Botões com microinterações (hover changes, soft scaling, subtle glow).
+* Pequenas transições e efeitos de interação para deixar a navegação mais envolvente.
+1. Estrutura e Organização das Seções:
+* Benefícios e Diferenciais visualmente separados em cards animados.
+* Depoimentos e Prova Social com visual agradável e dinâmico.
+* Rodapé elegante com links úteis, informações de contato e redes sociais.
+1. Estilo Visual Geral:
+* O site deve transmitir inovação, confiança, proteção e alta qualidade.
+* Mistura de modernidade com clean l — visualmente impressionante sem ser “pesado”. Notas Finais:
+* Evitar poluição visual.
+* Garantir um storytelling visual coeso ao longo de todas as seções.
+* Código limpo, responsivo e adaptado para CELULAR E SEO básico (otimizações de título, alt texts em imagens).
+* NAO USE EMOJIS/EMOTICONS DE MANEIRA ALGUMA, MANTENHA TODOS OS ICONES QUE JA ESTAO PRESENTES DA MESMA FORMA, NAO DEVE ALTERAR NENHUM ICONE. 
