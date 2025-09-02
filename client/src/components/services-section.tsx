@@ -220,7 +220,7 @@ export default function ServicesSection() {
           </Dialog>
 
           <Dialog>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all service-card" data-testid="service-branding">
+            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-4 border border-medgrowth-cyan/10" data-testid="service-branding">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Palette className="text-medgrowth-cyan w-6 h-6" />
               </div>
@@ -284,7 +284,7 @@ export default function ServicesSection() {
           </Dialog>
 
           <Dialog>
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all service-card" data-testid="service-ai-automation">
+            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-5 border border-medgrowth-cyan/10" data-testid="service-ai-automation">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Bot className="text-medgrowth-cyan w-6 h-6" />
               </div>
