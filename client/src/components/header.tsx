@@ -53,16 +53,12 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3" data-testid="logo">
+          <div className="flex items-center" data-testid="logo">
             <img 
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
               alt="MedGrowth Logo"
               className="h-10 w-auto"
             />
-            <div>
-              <h1 className="text-xl font-bold text-foreground">MedGrowth</h1>
-              <p className="text-xs text-muted-foreground">Crescer Juntos</p>
-            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -140,13 +136,12 @@ export default function Header() {
       >
         <div className="p-4">
           <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center">
               <img 
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
                 alt="MedGrowth Logo"
                 className="h-8 w-auto"
               />
-              <span className="text-xl font-bold">MedGrowth</span>
             </div>
             <Button
               variant="ghost"
