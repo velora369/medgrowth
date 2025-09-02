@@ -88,28 +88,14 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contato</h4>
             <div className="space-y-3 text-sm">
+              <div className="text-gray-800 font-medium">Atendimento 24h</div>
               <div className="flex items-center space-x-2">
                 <i className="fab fa-whatsapp text-medgrowth-cyan"></i>
-                <span>Atendimento 24h</span>
+                <span>whatsapp</span>
               </div>
-              <a
-                href="https://wa.me/5561996301406"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block font-semibold text-medgrowth-cyan hover:underline"
-                data-testid="footer-whatsapp"
-              >
-                (61) 99630-1406
-              </a>
-              <div className="flex items-center space-x-2 mt-4">
+              <div className="flex items-center space-x-2">
                 <i className="fab fa-instagram text-medgrowth-cyan"></i>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-medgrowth-dark transition-colors"
-                  data-testid="footer-instagram"
-                >
-                  @medgrowth
-                </a>
+                <span>instagram</span>
               </div>
             </div>
           </div>
