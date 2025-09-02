@@ -97,7 +97,12 @@
 
 @layer components {
   .hero-video-bg {
-    background: linear-gradient(135deg, rgba(53, 204, 219, 0.3) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(4, 68, 90, 0.4) 100%);
+    background: 
+      radial-gradient(circle at 25% 25%, rgba(53, 204, 219, 0.6) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(4, 68, 90, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(53, 204, 219, 0.3) 40%, rgba(4, 68, 90, 0.6) 100%),
+      linear-gradient(135deg, rgba(53, 204, 219, 0.8) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(4, 68, 90, 0.9) 100%);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   }
 
   .modern-nav {
