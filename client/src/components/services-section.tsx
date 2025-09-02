@@ -1,6 +1,6 @@
 import { Globe, Instagram, Megaphone, Palette, Bot, ArrowRight, X } from "lucide-react";
 import { useState } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
@@ -98,42 +98,57 @@ export default function ServicesSection() {
               <h3 className="text-lg font-semibold mb-3 text-medgrowth-dark">Gestão de Redes Sociais</h3>
               <p className="text-muted-foreground text-sm mb-4">Engaje pacientes e construa autoridade digital de forma consistente e ética</p>
               <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="w-full" data-testid="learn-more-social">
-                  Saiba Mais
+                <Button 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  data-testid="learn-more-social"
+                >
+                  <span>Saiba Mais</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
-                      <Instagram className="text-medgrowth-cyan w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-medgrowth-dark">{serviceDetails.social.title}</h3>
+            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogTitle className="sr-only">{serviceDetails.social.title}</DialogTitle>
+              <DialogDescription className="sr-only">{serviceDetails.social.description}</DialogDescription>
+              <div className="p-8">
+                <div className="flex items-center space-x-4 mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
+                    <Instagram className="text-white w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.social.title}</h3>
+                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{serviceDetails.social.description}</p>
+                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
+                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.social.description}</p>
+                </div>
                 <div className="mb-8">
-                  <h4 className="font-semibold text-medgrowth-dark mb-4">O que está incluso:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
+                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
+                    O que está incluso:
+                  </h4>
+                  <div className="grid gap-3">
                     {serviceDetails.social.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-medgrowth-cyan rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-600">{benefit}</span>
-                      </li>
+                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
+                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                        <span className="text-gray-700 font-medium">{benefit}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
                 <a
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Gestão de Redes Sociais para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all w-full justify-center"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
                   data-testid="social-media-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-lg"></i>
+                  <i className="fab fa-whatsapp text-xl"></i>
                   <span>Falar com Especialista</span>
+                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>
@@ -147,8 +162,12 @@ export default function ServicesSection() {
               <h3 className="text-lg font-semibold mb-3 text-medgrowth-dark">Tráfego Pago</h3>
               <p className="text-muted-foreground text-sm mb-4">Atraia pacientes qualificados imediatamente com campanhas otimizadas</p>
               <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="w-full" data-testid="learn-more-traffic">
-                  Saiba Mais
+                <Button 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  data-testid="learn-more-traffic"
+                >
+                  <span>Saiba Mais</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
             </div>
@@ -196,8 +215,12 @@ export default function ServicesSection() {
               <h3 className="text-lg font-semibold mb-3 text-medgrowth-dark">Branding e Identidade</h3>
               <p className="text-muted-foreground text-sm mb-4">Torne-se memorável no digital com identidade visual profissional</p>
               <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="w-full" data-testid="learn-more-branding">
-                  Saiba Mais
+                <Button 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  data-testid="learn-more-branding"
+                >
+                  <span>Saiba Mais</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
             </div>
@@ -245,8 +268,12 @@ export default function ServicesSection() {
               <h3 className="text-lg font-semibold mb-3 text-medgrowth-dark">Automações com IA</h3>
               <p className="text-muted-foreground text-sm mb-4">Ganhe tempo com processos inteligentes e atendimento automatizado</p>
               <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="w-full" data-testid="learn-more-ai">
-                  Saiba Mais
+                <Button 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  data-testid="learn-more-ai"
+                >
+                  <span>Saiba Mais</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
             </div>
