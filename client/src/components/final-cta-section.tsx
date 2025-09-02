@@ -8,9 +8,9 @@ import { useToast } from "@/hooks/use-toast";
 export default function FinalCtaSection() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone: "",
     specialty: "",
+    customSpecialty: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -24,35 +24,28 @@ export default function FinalCtaSection() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      // Determine the specialty text
+      const specialtyText = formData.specialty === "outras" ? formData.customSpecialty : formData.specialty;
+      
+      // Create WhatsApp message
+      const whatsappMessage = encodeURIComponent(
+        `Olá, meu nome é ${formData.name}, sou ${specialtyText}, quero ter a minha análise gratuita.`
+      );
+      
+      // Redirect to WhatsApp
+      window.open(`https://wa.me/5561996301406?text=${whatsappMessage}`, "_blank");
+      
+      toast({
+        title: "Redirecionando para o WhatsApp!",
+        description: "Sua mensagem foi preparada e você será direcionado para o WhatsApp.",
       });
-
-      if (response.ok) {
-        toast({
-          title: "Formulário enviado com sucesso!",
-          description: "Entraremos em contato em até 24 horas.",
-        });
-        
-        // Redirect to WhatsApp as well
-        const whatsappMessage = encodeURIComponent(
-          `Olá! Acabei de solicitar uma análise gratuita através do site. Meus dados: Nome: ${formData.name}, Email: ${formData.email}, Telefone: ${formData.phone}, Especialidade: ${formData.specialty}`
-        );
-        window.open(`https://wa.me/5561996301406?text=${whatsappMessage}`, "_blank");
-        
-        // Reset form
-        setFormData({ name: "", email: "", phone: "", specialty: "" });
-      } else {
-        throw new Error("Erro ao enviar formulário");
-      }
+      
+      // Reset form
+      setFormData({ name: "", phone: "", specialty: "", customSpecialty: "" });
     } catch (error) {
       toast({
-        title: "Erro ao enviar formulário",
-        description: "Tente novamente ou entre em contato via WhatsApp.",
+        title: "Erro ao preparar mensagem",
+        description: "Tente novamente preenchendo todos os campos.",
         variant: "destructive",
       });
     } finally {
@@ -106,7 +99,7 @@ export default function FinalCtaSection() {
             </div>
 
             <div className="bg-white text-medgrowth-dark p-8 rounded-2xl">
-              <h3 className="text-xl font-bold mb-6 text-center" data-testid="contact-form-title">Solicite Sua Análise Gratuita</h3>
+              <h3 className="text-xl font-bold mb-6 text-center" data-testid="contact-form-title">Solicite Sua Análise Gratuita Via WhatsApp</h3>
 
               <form onSubmit={handleSubmit} className="space-y-4" data-testid="contact-form">
                 <Input
@@ -116,14 +109,6 @@ export default function FinalCtaSection() {
                   onChange={(e) => handleInputChange("name", e.target.value)}
                   required
                   data-testid="input-name"
-                />
-                <Input
-                  type="email"
-                  placeholder="Seu melhor e-mail"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange("email", e.target.value)}
-                  required
-                  data-testid="input-email"
                 />
                 <Input
                   type="tel"
@@ -151,6 +136,16 @@ export default function FinalCtaSection() {
                     <SelectItem value="outras">Outras</SelectItem>
                   </SelectContent>
                 </Select>
+                {formData.specialty === "outras" && (
+                  <Input
+                    type="text"
+                    placeholder="Digite sua especialidade"
+                    value={formData.customSpecialty}
+                    onChange={(e) => handleInputChange("customSpecialty", e.target.value)}
+                    required
+                    data-testid="input-custom-specialty"
+                  />
+                )}
                 <Button
                   type="submit"
                   className="w-full bg-medgrowth-cyan text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all cta-button"
@@ -161,19 +156,6 @@ export default function FinalCtaSection() {
                 </Button>
               </form>
 
-              <div className="mt-6 text-center">
-                <p className="text-sm text-muted-foreground mb-3">Ou fale conosco diretamente:</p>
-                <a
-                  href="https://wa.me/5561996301406"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-medgrowth-cyan font-semibold hover:underline"
-                  data-testid="direct-whatsapp-link"
-                >
-                  <i className="fab fa-whatsapp"></i>
-                  <span>(61) 99630-1406</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
