@@ -16,20 +16,20 @@ export default function CaseStudiesSection() {
           <div className="bg-white rounded-2xl p-8 shadow-sm" data-testid="case-study-1">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-medgrowth-dark">[Especialidade Médica] - Aumento de 300% em Pacientes</h3>
+                <h3 className="text-2xl font-bold mb-4 text-medgrowth-dark">Cardiologia - Aumento de 300% em Pacientes</h3>
                 <p className="text-muted-foreground mb-6">
-                  Espaço reservado para descrição do caso: situação inicial, estratégia implementada e resultados obtidos em período específico.
+                  Dr. Marcos Silva, cardiologista em Brasília, chegou até nós com apenas 15 pacientes por mês. Implementamos uma estratégia integrada de gestão de redes sociais, tráfego pago no Google Ads e branding profissional. Em 8 meses, transformamos sua prática médica em referência digital.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-red-50 rounded-lg">
                     <h4 className="text-sm font-semibold text-red-600 mb-1">ANTES</h4>
-                    <p className="text-2xl font-bold text-red-600">[Métrica]</p>
-                    <p className="text-xs text-muted-foreground">[Período]</p>
+                    <p className="text-2xl font-bold text-red-600">15</p>
+                    <p className="text-xs text-muted-foreground">Pacientes/mês</p>
                   </div>
                   <div className="text-center p-4 bg-green-50 rounded-lg">
                     <h4 className="text-sm font-semibold text-green-600 mb-1">DEPOIS</h4>
-                    <p className="text-2xl font-bold text-green-600">[Métrica]</p>
-                    <p className="text-xs text-muted-foreground">[Período]</p>
+                    <p className="text-2xl font-bold text-green-600">62</p>
+                    <p className="text-xs text-muted-foreground">Pacientes/mês</p>
                   </div>
                 </div>
               </div>
@@ -50,21 +50,21 @@ export default function CaseStudiesSection() {
           <div className="bg-white rounded-2xl p-8 shadow-sm" data-testid="case-study-2">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:order-2">
-                <h3 className="text-2xl font-bold mb-4 text-medgrowth-dark">[Outra Especialidade] - Autoridade Digital Consolidada</h3>
+                <h3 className="text-2xl font-bold mb-4 text-medgrowth-dark">Dermatologia - Autoridade Digital Consolidada</h3>
                 <p className="text-muted-foreground mb-6">
-                  Espaço para descrição do caso focando em branding, autoridade digital e engajamento nas redes sociais.
+                  Dra. Ana Costa, dermatologista, buscava construir autoridade digital para expandir sua clínica. Desenvolvemos identidade visual profissional, estratégia de conteúdo educativo e campanhas de engajamento. Resultado: se tornou referência em dermatologia estética no Instagram.
                 </p>
                 <div className="grid grid-cols-3 gap-3">
                   <div className="text-center p-3 bg-medgrowth-light rounded-lg">
-                    <p className="text-lg font-bold text-medgrowth-cyan">[Number]K</p>
+                    <p className="text-lg font-bold text-medgrowth-cyan">25K</p>
                     <p className="text-xs text-muted-foreground">Seguidores</p>
                   </div>
                   <div className="text-center p-3 bg-medgrowth-light rounded-lg">
-                    <p className="text-lg font-bold text-medgrowth-cyan">[Number]%</p>
+                    <p className="text-lg font-bold text-medgrowth-cyan">8.7%</p>
                     <p className="text-xs text-muted-foreground">Engajamento</p>
                   </div>
                   <div className="text-center p-3 bg-medgrowth-light rounded-lg">
-                    <p className="text-lg font-bold text-medgrowth-cyan">[Number]</p>
+                    <p className="text-lg font-bold text-medgrowth-cyan">180</p>
                     <p className="text-xs text-muted-foreground">Leads/mês</p>
                   </div>
                 </div>
