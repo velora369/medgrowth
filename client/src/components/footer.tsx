@@ -100,7 +100,7 @@ export default function Footer() {
                 <span className="text-medgrowth-cyan transition-colors">WhatsApp</span>
               </a>
               <a
-                href="https://instagram.com/medgrowth"
+                href="https://www.instagram.com/medgrowthmkt/?utm_source=ig_web_button_share_sheet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 transform hover:scale-110 cursor-pointer group"
