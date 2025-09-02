@@ -98,6 +98,11 @@
 @layer components {
   .hero-video-bg {
     background: 
+      radial-gradient(circle at 15% 15%, rgba(4, 68, 90, 0.1) 0%, transparent 30%),
+      radial-gradient(circle at 85% 85%, rgba(53, 204, 219, 0.15) 0%, transparent 35%),
+      radial-gradient(circle at 60% 30%, rgba(4, 68, 90, 0.08) 0%, transparent 25%),
+      radial-gradient(circle at 30% 70%, rgba(53, 204, 219, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 75% 60%, rgba(4, 68, 90, 0.06) 0%, transparent 20%),
       radial-gradient(ellipse at 20% 80%, rgba(53, 204, 219, 0.4) 0%, transparent 50%),
       radial-gradient(ellipse at 80% 20%, rgba(53, 204, 219, 0.3) 0%, transparent 50%),
       linear-gradient(135deg, rgba(4, 68, 90, 0.8) 0%, rgba(236, 245, 242, 0.95) 40%, rgba(236, 245, 242, 0.95) 60%, rgba(4, 68, 90, 0.7) 100%);
