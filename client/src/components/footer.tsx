@@ -89,14 +89,26 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contato</h4>
             <div className="space-y-3 text-sm">
               <div className="text-gray-800 font-medium">Atendimento 24h</div>
-              <div className="flex items-center space-x-2">
-                <i className="fab fa-whatsapp text-medgrowth-cyan"></i>
-                <span>whatsapp</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <i className="fab fa-instagram text-medgrowth-cyan"></i>
-                <span>instagram</span>
-              </div>
+              <a
+                href="https://wa.me/5561996301406"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 transform hover:scale-110 cursor-pointer group"
+                data-testid="footer-whatsapp-link"
+              >
+                <i className="fab fa-whatsapp text-medgrowth-cyan group-hover:animate-pulse"></i>
+                <span className="group-hover:text-medgrowth-cyan transition-colors">whatsapp</span>
+              </a>
+              <a
+                href="https://instagram.com/medgrowth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 transform hover:scale-110 cursor-pointer group"
+                data-testid="footer-instagram-link"
+              >
+                <i className="fab fa-instagram text-medgrowth-cyan group-hover:animate-pulse"></i>
+                <span className="group-hover:text-medgrowth-cyan transition-colors">instagram</span>
+              </a>
             </div>
           </div>
         </div>
