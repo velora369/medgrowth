@@ -1,6 +1,6 @@
 import { Globe, Instagram, Megaphone, Palette, Bot, ArrowRight, X } from "lucide-react";
 import { useState } from "react";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
@@ -108,10 +108,14 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                <X className="h-4 w-4" />
+                <span className="sr-only">Close</span>
+              </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.social.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.social.description}</DialogDescription>
-              <div className="p-8">
+              <div className="p-6">
                 <div className="flex items-center space-x-4 mb-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
                     <Instagram className="text-white w-8 h-8" />
@@ -172,10 +176,14 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                <X className="h-4 w-4" />
+                <span className="sr-only">Close</span>
+              </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.traffic.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.traffic.description}</DialogDescription>
-              <div className="p-8">
+              <div className="p-6">
                 <div className="flex items-center space-x-4 mb-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
                     <Megaphone className="text-white w-8 h-8" />
@@ -236,10 +244,14 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                <X className="h-4 w-4" />
+                <span className="sr-only">Close</span>
+              </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.branding.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.branding.description}</DialogDescription>
-              <div className="p-8">
+              <div className="p-6">
                 <div className="flex items-center space-x-4 mb-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
                     <Palette className="text-white w-8 h-8" />
@@ -300,10 +312,14 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-2xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+                <X className="h-4 w-4" />
+                <span className="sr-only">Close</span>
+              </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.ai.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.ai.description}</DialogDescription>
-              <div className="p-8">
+              <div className="p-6">
                 <div className="flex items-center space-x-4 mb-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
                     <Bot className="text-white w-8 h-8" />
