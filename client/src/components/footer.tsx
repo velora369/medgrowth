@@ -97,7 +97,7 @@ export default function Footer() {
                 data-testid="footer-whatsapp-link"
               >
                 <i className="fab fa-whatsapp text-medgrowth-cyan group-hover:animate-pulse"></i>
-                <span className="group-hover:text-medgrowth-cyan transition-colors">whatsapp</span>
+                <span className="group-hover:text-medgrowth-cyan transition-colors">WhatsApp</span>
               </a>
               <a
                 href="https://instagram.com/medgrowth"
