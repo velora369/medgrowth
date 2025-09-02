@@ -145,8 +145,8 @@ export default function AboutSection() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                alt="Modern medical office with digital technology"
+                src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/um-medico-moderno-sorridente-e-confiante_j8zlxxa7qv2txvbn9wkdtw_fpfcmznkspi7y8qvprrjeq.webp"
+                alt="Médico moderno sorridente e confiante"
                 className="rounded-xl shadow-lg w-full h-auto"
                 data-testid="about-image"
               />
