@@ -37,36 +37,30 @@ export default function AboutSection() {
                 A <strong className="text-medgrowth-cyan">MedGrowth</strong> nasceu para revolucionar o marketing médico. Atuamos como extensão digital da sua clínica, cuidando da sua autoridade online com estratégias sob medida.
               </p>
 
-              <div className="space-y-6 mb-8">
+              <div className="space-y-3 mb-6">
                 {valueDetails.map((value, index) => {
                   const IconComponent = value.icon;
                   return (
                     <div 
                       key={index}
-                      className="relative group bg-gradient-to-r from-white to-medgrowth-light/30 border border-medgrowth-cyan/10 rounded-2xl p-6 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] hover:border-medgrowth-cyan/30 backdrop-blur-sm" 
+                      className="bg-white border border-gray-100 rounded-lg p-4 hover:border-medgrowth-cyan/30 transition-colors duration-200" 
                       data-testid={`value-${value.title.toLowerCase().replace(' ', '-')}`}
                     >
-                      {/* Efeito de brilho futurista */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-medgrowth-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                      
-                      <div className="relative flex items-start gap-6">
-                        {/* Ícone com efeito futurista */}
-                        <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-cyan/80 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-medgrowth-cyan/30 group-hover:shadow-xl transition-all duration-300">
-                          <IconComponent className="w-8 h-8 text-white" />
+                      <div className="flex items-start gap-4">
+                        {/* Ícone minimalista */}
+                        <div className="flex-shrink-0 w-10 h-10 bg-medgrowth-cyan rounded-lg flex items-center justify-center">
+                          <IconComponent className="w-5 h-5 text-white" />
                         </div>
                         
                         {/* Conteúdo */}
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-xl text-medgrowth-dark mb-3 group-hover:text-medgrowth-cyan transition-colors duration-300">
+                          <h3 className="font-semibold text-lg text-medgrowth-dark mb-2">
                             {value.title}
                           </h3>
                           <p className="text-gray-600 leading-relaxed text-sm">
                             {value.description}
                           </p>
                         </div>
-                        
-                        {/* Indicador futurista */}
-                        <div className="flex-shrink-0 w-2 h-full bg-gradient-to-b from-medgrowth-cyan/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
                     </div>
                   );
