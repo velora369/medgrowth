@@ -108,38 +108,30 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
-              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            <DialogContent className="max-w-md bg-white border border-medgrowth-cyan/20 shadow-xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 transition-opacity">
                 <X className="h-4 w-4" />
                 <span className="sr-only">Close</span>
               </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.social.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.social.description}</DialogDescription>
-              <div className="p-6">
-                <div className="flex items-center space-x-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
-                    <Instagram className="text-white w-8 h-8" />
+              <div className="p-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
+                    <Instagram className="text-medgrowth-cyan w-6 h-6" />
                   </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.social.title}</h3>
-                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
-                  </div>
+                  <h3 className="text-xl font-bold text-medgrowth-dark">{serviceDetails.social.title}</h3>
                 </div>
-                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
-                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.social.description}</p>
-                </div>
-                <div className="mb-8">
-                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
-                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
-                    O que está incluso:
-                  </h4>
-                  <div className="grid gap-3">
-                    {serviceDetails.social.benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
-                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                <p className="text-gray-600 text-sm mb-4">{serviceDetails.social.description}</p>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-medgrowth-dark mb-3">Principais benefícios:</h4>
+                  <div className="space-y-2">
+                    {serviceDetails.social.benefits.slice(0, 3).map((benefit, index) => (
+                      <div key={index} className="flex items-start space-x-2">
+                        <div className="w-4 h-4 bg-medgrowth-cyan rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                         </div>
-                        <span className="text-gray-700 font-medium">{benefit}</span>
+                        <span className="text-gray-700 text-sm">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -148,12 +140,11 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Gestão de Redes Sociais para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
                   data-testid="social-media-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-xl"></i>
+                  <i className="fab fa-whatsapp"></i>
                   <span>Falar com Especialista</span>
-                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>
@@ -176,38 +167,30 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
-              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            <DialogContent className="max-w-md bg-white border border-medgrowth-cyan/20 shadow-xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 transition-opacity">
                 <X className="h-4 w-4" />
                 <span className="sr-only">Close</span>
               </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.traffic.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.traffic.description}</DialogDescription>
-              <div className="p-6">
-                <div className="flex items-center space-x-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
-                    <Megaphone className="text-white w-8 h-8" />
+              <div className="p-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
+                    <Megaphone className="text-medgrowth-cyan w-6 h-6" />
                   </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.traffic.title}</h3>
-                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
-                  </div>
+                  <h3 className="text-xl font-bold text-medgrowth-dark">{serviceDetails.traffic.title}</h3>
                 </div>
-                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
-                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.traffic.description}</p>
-                </div>
-                <div className="mb-8">
-                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
-                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
-                    O que está incluso:
-                  </h4>
-                  <div className="grid gap-3">
-                    {serviceDetails.traffic.benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
-                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                <p className="text-gray-600 text-sm mb-4">{serviceDetails.traffic.description}</p>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-medgrowth-dark mb-3">Principais benefícios:</h4>
+                  <div className="space-y-2">
+                    {serviceDetails.traffic.benefits.slice(0, 3).map((benefit, index) => (
+                      <div key={index} className="flex items-start space-x-2">
+                        <div className="w-4 h-4 bg-medgrowth-cyan rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                         </div>
-                        <span className="text-gray-700 font-medium">{benefit}</span>
+                        <span className="text-gray-700 text-sm">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -216,12 +199,11 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Tráfego Pago para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
                   data-testid="traffic-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-xl"></i>
+                  <i className="fab fa-whatsapp"></i>
                   <span>Falar com Especialista</span>
-                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>
@@ -244,38 +226,30 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
-              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            <DialogContent className="max-w-md bg-white border border-medgrowth-cyan/20 shadow-xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 transition-opacity">
                 <X className="h-4 w-4" />
                 <span className="sr-only">Close</span>
               </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.branding.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.branding.description}</DialogDescription>
-              <div className="p-6">
-                <div className="flex items-center space-x-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
-                    <Palette className="text-white w-8 h-8" />
+              <div className="p-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
+                    <Palette className="text-medgrowth-cyan w-6 h-6" />
                   </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.branding.title}</h3>
-                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
-                  </div>
+                  <h3 className="text-xl font-bold text-medgrowth-dark">{serviceDetails.branding.title}</h3>
                 </div>
-                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
-                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.branding.description}</p>
-                </div>
-                <div className="mb-8">
-                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
-                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
-                    O que está incluso:
-                  </h4>
-                  <div className="grid gap-3">
-                    {serviceDetails.branding.benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
-                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                <p className="text-gray-600 text-sm mb-4">{serviceDetails.branding.description}</p>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-medgrowth-dark mb-3">Principais benefícios:</h4>
+                  <div className="space-y-2">
+                    {serviceDetails.branding.benefits.slice(0, 3).map((benefit, index) => (
+                      <div key={index} className="flex items-start space-x-2">
+                        <div className="w-4 h-4 bg-medgrowth-cyan rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                         </div>
-                        <span className="text-gray-700 font-medium">{benefit}</span>
+                        <span className="text-gray-700 text-sm">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -284,12 +258,11 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Branding e Identidade para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
                   data-testid="branding-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-xl"></i>
+                  <i className="fab fa-whatsapp"></i>
                   <span>Falar com Especialista</span>
-                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>
@@ -312,38 +285,30 @@ export default function ServicesSection() {
                 </Button>
               </DialogTrigger>
             </div>
-            <DialogContent className="max-w-xl bg-gradient-to-br from-white via-medgrowth-light to-white border-2 border-medgrowth-cyan/20 shadow-2xl">
-              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            <DialogContent className="max-w-md bg-white border border-medgrowth-cyan/20 shadow-xl">
+              <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 transition-opacity">
                 <X className="h-4 w-4" />
                 <span className="sr-only">Close</span>
               </DialogClose>
               <DialogTitle className="sr-only">{serviceDetails.ai.title}</DialogTitle>
               <DialogDescription className="sr-only">{serviceDetails.ai.description}</DialogDescription>
-              <div className="p-6">
-                <div className="flex items-center space-x-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-2xl flex items-center justify-center shadow-lg">
-                    <Bot className="text-white w-8 h-8" />
+              <div className="p-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center">
+                    <Bot className="text-medgrowth-cyan w-6 h-6" />
                   </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-medgrowth-dark mb-2">{serviceDetails.ai.title}</h3>
-                    <div className="w-20 h-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark rounded-full"></div>
-                  </div>
+                  <h3 className="text-xl font-bold text-medgrowth-dark">{serviceDetails.ai.title}</h3>
                 </div>
-                <div className="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-medgrowth-cyan/10 mb-6">
-                  <p className="text-gray-700 text-lg leading-relaxed">{serviceDetails.ai.description}</p>
-                </div>
-                <div className="mb-8">
-                  <h4 className="text-xl font-bold text-medgrowth-dark mb-6 flex items-center">
-                    <div className="w-2 h-8 bg-gradient-to-b from-medgrowth-cyan to-medgrowth-dark rounded-full mr-3"></div>
-                    O que está incluso:
-                  </h4>
-                  <div className="grid gap-3">
-                    {serviceDetails.ai.benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start space-x-3 bg-white/70 p-4 rounded-lg border border-medgrowth-cyan/5">
-                        <div className="w-6 h-6 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                <p className="text-gray-600 text-sm mb-4">{serviceDetails.ai.description}</p>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-medgrowth-dark mb-3">Principais benefícios:</h4>
+                  <div className="space-y-2">
+                    {serviceDetails.ai.benefits.slice(0, 3).map((benefit, index) => (
+                      <div key={index} className="flex items-start space-x-2">
+                        <div className="w-4 h-4 bg-medgrowth-cyan rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                         </div>
-                        <span className="text-gray-700 font-medium">{benefit}</span>
+                        <span className="text-gray-700 text-sm">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -352,12 +317,11 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Automações com IA para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full justify-center text-lg"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
                   data-testid="ai-whatsapp-cta"
                 >
-                  <i className="fab fa-whatsapp text-xl"></i>
+                  <i className="fab fa-whatsapp"></i>
                   <span>Falar com Especialista</span>
-                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </DialogContent>
