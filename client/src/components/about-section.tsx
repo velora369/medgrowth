@@ -37,7 +37,7 @@ export default function AboutSection() {
                 A <strong className="text-medgrowth-cyan">MedGrowth</strong> nasceu para revolucionar o marketing médico. Atuamos como extensão digital da sua clínica, cuidando da sua autoridade online com estratégias sob medida.
               </p>
 
-              <div className="space-y-3 mb-6">
+              <div className="grid grid-cols-2 gap-3 mb-6">
                 {valueDetails.map((value, index) => {
                   const IconComponent = value.icon;
                   return (
@@ -46,18 +46,18 @@ export default function AboutSection() {
                       className="bg-white border border-gray-100 rounded-lg p-4 hover:border-medgrowth-cyan/30 transition-colors duration-200" 
                       data-testid={`value-${value.title.toLowerCase().replace(' ', '-')}`}
                     >
-                      <div className="flex items-start gap-4">
+                      <div className="text-center">
                         {/* Ícone minimalista */}
-                        <div className="flex-shrink-0 w-10 h-10 bg-medgrowth-cyan rounded-lg flex items-center justify-center">
+                        <div className="w-10 h-10 bg-medgrowth-cyan rounded-lg flex items-center justify-center mx-auto mb-3">
                           <IconComponent className="w-5 h-5 text-white" />
                         </div>
                         
                         {/* Conteúdo */}
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-lg text-medgrowth-dark mb-2">
+                        <div>
+                          <h3 className="font-semibold text-base text-medgrowth-dark mb-2">
                             {value.title}
                           </h3>
-                          <p className="text-gray-600 leading-relaxed text-sm">
+                          <p className="text-gray-600 leading-relaxed text-xs">
                             {value.description}
                           </p>
                         </div>
