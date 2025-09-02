@@ -39,7 +39,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#home")}
-                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-cyan transition-colors text-left relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                   data-testid="footer-nav-home"
                 >
                   Home
@@ -48,7 +48,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#quem-somos")}
-                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-cyan transition-colors text-left relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                   data-testid="footer-nav-about"
                 >
                   Quem Somos
@@ -57,7 +57,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#servicos")}
-                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-cyan transition-colors text-left relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                   data-testid="footer-nav-services"
                 >
                   Serviços
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#casos-sucesso")}
-                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-cyan transition-colors text-left relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                   data-testid="footer-nav-cases"
                 >
                   Casos de Sucesso
@@ -75,7 +75,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#contato")}
-                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-cyan transition-colors text-left relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                   data-testid="footer-nav-contact"
                 >
                   Contato
