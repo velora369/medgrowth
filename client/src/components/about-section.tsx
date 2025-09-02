@@ -37,27 +37,31 @@ export default function AboutSection() {
                 A <strong className="text-medgrowth-cyan">MedGrowth</strong> nasceu para revolucionar o marketing médico. Atuamos como extensão digital da sua clínica, cuidando da sua autoridade online com estratégias sob medida.
               </p>
 
-              <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-2 gap-4 mb-8">
                 {valueDetails.map((value, index) => {
                   const IconComponent = value.icon;
                   return (
                     <div 
                       key={index}
-                      className="bg-white border border-gray-100 rounded-lg p-4 hover:border-medgrowth-cyan/30 transition-colors duration-200" 
+                      className="group bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-medgrowth-cyan/10 hover:border-medgrowth-cyan/20 transition-all duration-300 hover:-translate-y-1" 
                       data-testid={`value-${value.title.toLowerCase().replace(' ', '-')}`}
                     >
                       <div className="text-center">
-                        {/* Ícone minimalista */}
-                        <div className="w-10 h-10 bg-medgrowth-cyan rounded-lg flex items-center justify-center mx-auto mb-3">
-                          <IconComponent className="w-5 h-5 text-white" />
+                        {/* Ícone moderno */}
+                        <div className="relative">
+                          <div className="w-14 h-14 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-cyan/80 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-medgrowth-cyan/30 transition-all duration-300">
+                            <IconComponent className="w-6 h-6 text-white" />
+                          </div>
+                          {/* Efeito de glow sutil */}
+                          <div className="absolute inset-0 w-14 h-14 bg-medgrowth-cyan/20 rounded-2xl mx-auto blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         
                         {/* Conteúdo */}
                         <div>
-                          <h3 className="font-semibold text-base text-medgrowth-dark mb-2">
+                          <h3 className="font-bold text-lg text-medgrowth-dark mb-3 group-hover:text-medgrowth-cyan transition-colors duration-300">
                             {value.title}
                           </h3>
-                          <p className="text-gray-600 leading-relaxed text-xs">
+                          <p className="text-gray-600 leading-relaxed text-sm line-height-loose">
                             {value.description}
                           </p>
                         </div>
