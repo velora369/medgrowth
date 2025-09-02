@@ -1,5 +1,5 @@
 import { Shield, Lightbulb, TrendingUp, Handshake } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
@@ -46,13 +46,16 @@ export default function AboutSection() {
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="text-xs" data-testid="button-read-more-ethics">
+                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-ethics">
                         Ler mais
-                      </Button>
+                      </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
                       <DialogHeader>
                         <DialogTitle className="text-medgrowth-dark">{valueDetails.ethics.title}</DialogTitle>
+                        <DialogDescription className="sr-only">
+                          Descrição detalhada sobre {valueDetails.ethics.title.toLowerCase()}
+                        </DialogDescription>
                       </DialogHeader>
                       <p className="text-gray-600 leading-relaxed">{valueDetails.ethics.description}</p>
                     </DialogContent>
@@ -68,13 +71,16 @@ export default function AboutSection() {
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="text-xs" data-testid="button-read-more-innovation">
+                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-innovation">
                         Ler mais
-                      </Button>
+                      </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
                       <DialogHeader>
                         <DialogTitle className="text-medgrowth-dark">{valueDetails.innovation.title}</DialogTitle>
+                        <DialogDescription className="sr-only">
+                          Descrição detalhada sobre {valueDetails.innovation.title.toLowerCase()}
+                        </DialogDescription>
                       </DialogHeader>
                       <p className="text-gray-600 leading-relaxed">{valueDetails.innovation.description}</p>
                     </DialogContent>
@@ -90,13 +96,16 @@ export default function AboutSection() {
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="text-xs" data-testid="button-read-more-results">
+                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-results">
                         Ler mais
-                      </Button>
+                      </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
                       <DialogHeader>
                         <DialogTitle className="text-medgrowth-dark">{valueDetails.results.title}</DialogTitle>
+                        <DialogDescription className="sr-only">
+                          Descrição detalhada sobre {valueDetails.results.title.toLowerCase()}
+                        </DialogDescription>
                       </DialogHeader>
                       <p className="text-gray-600 leading-relaxed">{valueDetails.results.description}</p>
                     </DialogContent>
@@ -112,13 +121,16 @@ export default function AboutSection() {
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="text-xs" data-testid="button-read-more-partnership">
+                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-partnership">
                         Ler mais
-                      </Button>
+                      </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
                       <DialogHeader>
                         <DialogTitle className="text-medgrowth-dark">{valueDetails.partnership.title}</DialogTitle>
+                        <DialogDescription className="sr-only">
+                          Descrição detalhada sobre {valueDetails.partnership.title.toLowerCase()}
+                        </DialogDescription>
                       </DialogHeader>
                       <p className="text-gray-600 leading-relaxed">{valueDetails.partnership.description}</p>
                     </DialogContent>
