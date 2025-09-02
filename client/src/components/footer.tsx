@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-medgrowth-dark text-white py-12 border-t border-medgrowth-cyan/20">
+    <footer className="bg-white text-gray-800 py-12 border-t border-gray-200">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -24,10 +24,10 @@ export default function Footer() {
               />
               <div>
                 <h3 className="text-xl font-bold">MedGrowth</h3>
-                <p className="text-sm opacity-80">Crescer Juntos</p>
+                <p className="text-sm text-gray-600">Crescer Juntos</p>
               </div>
             </div>
-            <p className="text-sm opacity-80 mb-4 max-w-md" data-testid="footer-description">
+            <p className="text-sm text-gray-600 mb-4 max-w-md" data-testid="footer-description">
               Sua autoridade digital, nosso compromisso. Construindo o futuro digital da medicina com ética, inovação e resultados reais.
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#home")}
-                  className="opacity-80 hover:opacity-100 hover:text-medgrowth-cyan transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
                   data-testid="footer-nav-home"
                 >
                   Home
@@ -48,7 +48,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#quem-somos")}
-                  className="opacity-80 hover:opacity-100 hover:text-medgrowth-cyan transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
                   data-testid="footer-nav-about"
                 >
                   Quem Somos
@@ -57,7 +57,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#servicos")}
-                  className="opacity-80 hover:opacity-100 hover:text-medgrowth-cyan transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
                   data-testid="footer-nav-services"
                 >
                   Serviços
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#casos-sucesso")}
-                  className="opacity-80 hover:opacity-100 hover:text-medgrowth-cyan transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
                   data-testid="footer-nav-cases"
                 >
                   Casos de Sucesso
@@ -75,7 +75,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => handleNavClick("#contato")}
-                  className="opacity-80 hover:opacity-100 hover:text-medgrowth-cyan transition-colors text-left"
+                  className="text-gray-600 hover:text-medgrowth-dark transition-colors text-left"
                   data-testid="footer-nav-contact"
                 >
                   Contato
@@ -105,7 +105,7 @@ export default function Footer() {
                 <i className="fab fa-instagram text-medgrowth-cyan"></i>
                 <a
                   href="#"
-                  className="opacity-80 hover:opacity-100 hover:text-medgrowth-cyan transition-colors"
+                  className="text-gray-600 hover:text-medgrowth-dark transition-colors"
                   data-testid="footer-instagram"
                 >
                   @medgrowth
@@ -115,8 +115,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-medgrowth-cyan/20 mt-8 pt-8 text-center">
-          <p className="text-sm opacity-80" data-testid="footer-copyright">
+        <div className="border-t border-gray-200 mt-8 pt-8 text-center">
+          <p className="text-sm text-gray-600" data-testid="footer-copyright">
             © {currentYear} MedGrowth. Construindo o futuro digital da medicina.
           </p>
         </div>
