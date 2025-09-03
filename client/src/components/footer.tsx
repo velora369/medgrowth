@@ -20,7 +20,7 @@ export default function Footer() {
               <img 
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/logo-nome-.webp"
                 alt="MedGrowth - Marketing Digital para Médicos"
-                className="h-16 w-auto"
+                className="h-24 md:h-28 w-auto"
               />
             </div>
             <p className="text-sm text-gray-600 mb-4 max-w-md" data-testid="footer-description">
