@@ -103,7 +103,7 @@ export default function ServicesSection() {
                   className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
                   data-testid="learn-more-social"
                 >
-                  <span>Saiba Mais</span>
+                  <span>Ver estratégias de redes sociais</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
@@ -162,7 +162,7 @@ export default function ServicesSection() {
                   className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
                   data-testid="learn-more-traffic"
                 >
-                  <span>Saiba Mais</span>
+                  <span>Ver campanhas de tráfego pago</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
@@ -221,7 +221,7 @@ export default function ServicesSection() {
                   className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
                   data-testid="learn-more-branding"
                 >
-                  <span>Saiba Mais</span>
+                  <span>Conhecer nossa identidade visual</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
@@ -280,7 +280,7 @@ export default function ServicesSection() {
                   className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
                   data-testid="learn-more-ai"
                 >
-                  <span>Saiba Mais</span>
+                  <span>Descobrir automações inteligentes</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>
@@ -326,6 +326,21 @@ export default function ServicesSection() {
               </div>
             </DialogContent>
           </Dialog>
+        </div>
+        
+        <div className="text-center mt-16 fade-in-up">
+          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            Escolha a solução ideal para o seu consultório ou opte pelo pacote completo 360 Médico
+          </p>
+          <a
+            href="https://wa.me/5561996301406"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            data-testid="services-cta-button"
+          >
+            <span>Quero Minha Análise Gratuita</span>
+          </a>
         </div>
       </div>
     </section>

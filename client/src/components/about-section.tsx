@@ -47,7 +47,7 @@ export default function AboutSection() {
                   <Dialog>
                     <DialogTrigger asChild>
                       <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-ethics">
-                        Ler mais
+                        Ver nossa abordagem ética
                       </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
@@ -72,7 +72,7 @@ export default function AboutSection() {
                   <Dialog>
                     <DialogTrigger asChild>
                       <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-innovation">
-                        Ler mais
+                        Conheça nossas inovações
                       </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
@@ -97,7 +97,7 @@ export default function AboutSection() {
                   <Dialog>
                     <DialogTrigger asChild>
                       <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-results">
-                        Ler mais
+                        Ver resultados comprovados
                       </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
@@ -122,7 +122,7 @@ export default function AboutSection() {
                   <Dialog>
                     <DialogTrigger asChild>
                       <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-partnership">
-                        Ler mais
+                        Saiba como trabalhamos juntos
                       </button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
@@ -151,6 +151,21 @@ export default function AboutSection() {
                 <p className="text-sm font-semibold">Parceria de<br />Longo Prazo</p>
               </div>
             </div>
+          </div>
+          
+          <div className="text-center mt-12 fade-in-up">
+            <p className="text-lg text-gray-600 mb-6">
+              Pronto para transformar sua presença digital?
+            </p>
+            <a
+              href="https://wa.me/5561996301406"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              data-testid="about-cta-button"
+            >
+              <span>Quero Minha Análise Gratuita</span>
+            </a>
           </div>
         </div>
       </div>

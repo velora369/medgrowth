@@ -22,7 +22,7 @@ export default function HeroSection() {
             data-testid="hero-cta-button"
           >
             <TrendingUp className="w-6 h-6" />
-            <span>Solicite Sua Análise Gratuita</span>
+            <span>Quero Minha Análise Gratuita</span>
           </a>
         </div>
       </div>
