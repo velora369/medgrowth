@@ -96,9 +96,20 @@ export default function Footer() {
                 <span className="text-medgrowth-cyan transition-colors">WhatsApp</span>
               </a>
               <a
-                href="https://www.instagram.com/medgrowthmkt/?utm_source=ig_web_button_share_sheet"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="instagram://user?username=medgrowthmkt"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const instagramApp = 'instagram://user?username=medgrowthmkt';
+                  const instagramWeb = 'https://www.instagram.com/medgrowthmkt/?utm_source=ig_web_button_share_sheet';
+                  
+                  // Tenta abrir o app do Instagram
+                  window.location.href = instagramApp;
+                  
+                  // Fallback para o navegador após um pequeno delay
+                  setTimeout(() => {
+                    window.open(instagramWeb, '_blank');
+                  }, 1000);
+                }}
                 className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 transform hover:scale-110 cursor-pointer group"
                 data-testid="footer-instagram-link"
               >

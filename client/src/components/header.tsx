@@ -227,9 +227,20 @@ export default function Header() {
                 <i className="fab fa-whatsapp text-xl text-medgrowth-cyan group-hover:text-white transition-colors"></i>
               </a>
               <a
-                href="https://www.instagram.com/medgrowthmkt/?utm_source=ig_web_button_share_sheet"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="instagram://user?username=medgrowthmkt"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const instagramApp = 'instagram://user?username=medgrowthmkt';
+                  const instagramWeb = 'https://www.instagram.com/medgrowthmkt/?utm_source=ig_web_button_share_sheet';
+                  
+                  // Tenta abrir o app do Instagram
+                  window.location.href = instagramApp;
+                  
+                  // Fallback para o navegador após um pequeno delay
+                  setTimeout(() => {
+                    window.open(instagramWeb, '_blank');
+                  }, 1000);
+                }}
                 className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan hover:scale-110 transition-all duration-300 group"
                 data-testid="mobile-social-instagram"
               >
