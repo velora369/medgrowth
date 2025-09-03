@@ -139,72 +139,101 @@ export default function Header() {
         }}
         data-testid="mobile-menu"
       >
-        <div className="p-4 bg-white h-full w-full">
-          <div className="flex items-center justify-between mb-8">
+        <div className="p-6 bg-white h-full w-full flex flex-col">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-10">
             <div className="flex items-center">
               <img 
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
                 alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </div>
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleMobileMenu}
+              className="hover:bg-gray-100 rounded-full transition-all duration-300"
               data-testid="mobile-menu-close"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 text-gray-600" />
             </Button>
           </div>
 
-          <div className="space-y-6">
+          {/* Navigation */}
+          <div className="space-y-1 flex-1">
             <button
               onClick={() => handleNavClick("#home")}
-              className="block text-lg font-medium w-full text-left"
+              className="block text-lg font-medium w-full text-left py-4 px-4 rounded-xl hover:bg-medgrowth-cyan/5 hover:text-medgrowth-cyan transition-all duration-300 border-b border-gray-100"
               data-testid="mobile-nav-home"
             >
               Home
             </button>
             <button
               onClick={() => handleNavClick("#quem-somos")}
-              className="block text-lg font-medium w-full text-left"
+              className="block text-lg font-medium w-full text-left py-4 px-4 rounded-xl hover:bg-medgrowth-cyan/5 hover:text-medgrowth-cyan transition-all duration-300 border-b border-gray-100"
               data-testid="mobile-nav-about"
             >
               Quem Somos
             </button>
             <button
               onClick={() => handleNavClick("#servicos")}
-              className="block text-lg font-medium w-full text-left"
+              className="block text-lg font-medium w-full text-left py-4 px-4 rounded-xl hover:bg-medgrowth-cyan/5 hover:text-medgrowth-cyan transition-all duration-300 border-b border-gray-100"
               data-testid="mobile-nav-services"
             >
               Serviços
             </button>
             <button
               onClick={() => handleNavClick("#casos-sucesso")}
-              className="block text-lg font-medium w-full text-left"
+              className="block text-lg font-medium w-full text-left py-4 px-4 rounded-xl hover:bg-medgrowth-cyan/5 hover:text-medgrowth-cyan transition-all duration-300 border-b border-gray-100"
               data-testid="mobile-nav-cases"
             >
               Casos de Sucesso
             </button>
             <button
               onClick={() => handleNavClick("#contato")}
-              className="block text-lg font-medium w-full text-left"
+              className="block text-lg font-medium w-full text-left py-4 px-4 rounded-xl hover:bg-medgrowth-cyan/5 hover:text-medgrowth-cyan transition-all duration-300 border-b border-gray-100"
               data-testid="mobile-nav-contact"
             >
               Contato
             </button>
+          </div>
 
+          {/* Bottom Section */}
+          <div className="mt-auto space-y-4">
+            {/* CTA Button */}
             <a
               href="https://wa.me/5561996301406"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg w-full justify-center mt-8"
+              className="flex items-center justify-center space-x-3 bg-medgrowth-cyan text-white px-6 py-4 rounded-2xl font-semibold text-lg hover:bg-medgrowth-cyan/90 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
               data-testid="mobile-whatsapp-cta"
             >
-              <i className="fab fa-whatsapp"></i>
-              <span>Fale Conosco Agora</span>
+              <i className="fab fa-whatsapp text-xl group-hover:animate-pulse"></i>
+              <span>Fale Conosco</span>
             </a>
+
+            {/* Social Icons */}
+            <div className="flex justify-center space-x-8 pt-4 border-t border-gray-100">
+              <a
+                href="https://wa.me/5561996301406"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan hover:scale-110 transition-all duration-300 group"
+                data-testid="mobile-social-whatsapp"
+              >
+                <i className="fab fa-whatsapp text-xl text-medgrowth-cyan group-hover:text-white transition-colors"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/medgrowthmkt/?utm_source=ig_web_button_share_sheet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan hover:scale-110 transition-all duration-300 group"
+                data-testid="mobile-social-instagram"
+              >
+                <i className="fab fa-instagram text-xl text-medgrowth-cyan group-hover:text-white transition-colors"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
