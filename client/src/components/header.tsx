@@ -129,12 +129,17 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-full bg-white shadow-2xl z-50 transition-transform duration-300 ${
+        className={`md:hidden fixed inset-0 w-screen h-screen transition-transform duration-300 ${
           isMobileMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
+        style={{
+          backgroundColor: '#ffffff',
+          zIndex: 9999,
+          opacity: 1
+        }}
         data-testid="mobile-menu"
       >
-        <div className="p-4">
+        <div className="p-4 bg-white h-full w-full">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center">
               <img 

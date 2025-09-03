@@ -183,7 +183,19 @@
 
   /* Menu Mobile - Garantir fundo sólido branco */
   [data-testid="mobile-menu"] {
-    background-color: rgb(255, 255, 255) !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
     opacity: 1 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  [data-testid="mobile-menu"] * {
+    background-color: transparent;
+  }
+  
+  [data-testid="mobile-menu"] > div {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
   }
 }
