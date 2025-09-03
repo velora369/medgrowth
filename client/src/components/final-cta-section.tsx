@@ -8,7 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 export default function FinalCtaSection() {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     specialty: "",
     customSpecialty: "",
   });
@@ -41,7 +40,7 @@ export default function FinalCtaSection() {
       });
       
       // Reset form
-      setFormData({ name: "", phone: "", specialty: "", customSpecialty: "" });
+      setFormData({ name: "", specialty: "", customSpecialty: "" });
     } catch (error) {
       toast({
         title: "Erro ao preparar mensagem",
@@ -109,14 +108,6 @@ export default function FinalCtaSection() {
                   onChange={(e) => handleInputChange("name", e.target.value)}
                   required
                   data-testid="input-name"
-                />
-                <Input
-                  type="tel"
-                  placeholder="WhatsApp (DDD) 99999-9999"
-                  value={formData.phone}
-                  onChange={(e) => handleInputChange("phone", e.target.value)}
-                  required
-                  data-testid="input-phone"
                 />
                 <Select
                   value={formData.specialty}
