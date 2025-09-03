@@ -129,7 +129,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-full backdrop-blur-md bg-white/95 z-40 transition-transform duration-300 ${
+        className={`md:hidden fixed top-0 left-0 w-full h-full bg-white z-40 transition-transform duration-300 ${
           isMobileMenuOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
         data-testid="mobile-menu"
