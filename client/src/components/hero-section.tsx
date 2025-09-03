@@ -4,16 +4,16 @@ export default function HeroSection() {
   return (
     <section id="home" className="hero-video-bg min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-testid="hero-title">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight gentle-fade-up" data-testid="hero-title">
           <span className="text-medgrowth-dark">MedGrowth:</span> Sua Jornada para o<br />
           <span className="text-medgrowth-cyan bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Sucesso Digital</span> Começa Aqui
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed font-medium" data-testid="hero-subtitle">
+        <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed font-medium gentle-fade-up-delay" data-testid="hero-subtitle">
           Cansado de pacotes prontos? Nós criamos estratégias personalizadas para você focar no que realmente importa: <strong className="text-medgrowth-dark">seus pacientes</strong>.
         </p>
 
-        <div>
+        <div className="gentle-fade-up-delay-2">
           <a
             href="https://wa.me/5561996301406"
             target="_blank"
