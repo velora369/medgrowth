@@ -142,7 +142,7 @@ export default function AboutSection() {
             <div className="relative">
               <img
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/um-medico-moderno-sorridente-e-confiante_j8zlxxa7qv2txvbn9wkdtw_fpfcmznkspi7y8qvprrjeq.webp"
-                alt="Médico moderno sorridente e confiante"
+                alt="Médico profissional sorrindo confiante em seu consultório, representando a confiança e autoridade que a MedGrowth ajuda a construir no ambiente digital"
                 className="rounded-xl shadow-lg w-full h-auto"
                 data-testid="about-image"
               />

@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4" data-testid="footer-logo">
               <img 
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
-                alt="MedGrowth Logo"
+                alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
                 className="h-10 w-auto"
               />
               <div>

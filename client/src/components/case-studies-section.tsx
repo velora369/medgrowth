@@ -36,7 +36,7 @@ export default function CaseStudiesSection() {
               <div className="relative">
                 <img
                   src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                  alt="Modern healthcare technology and analytics"
+                  alt="Dashboard de análise de crescimento mostrando gráficos e métricas de performance digital para consulta médica"
                   className="rounded-xl w-full h-auto"
                 />
                 <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -72,7 +72,7 @@ export default function CaseStudiesSection() {
               <div className="md:order-1 relative">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                  alt="Digital marketing analytics and growth charts"
+                  alt="Gráficos de crescimento e estatísticas de marketing digital para clínicas médicas com dados de engajamento e conversão"
                   className="rounded-xl w-full h-auto"
                 />
                 <div className="absolute bottom-4 left-4 bg-medgrowth-cyan text-white px-3 py-1 rounded-full text-sm font-semibold">

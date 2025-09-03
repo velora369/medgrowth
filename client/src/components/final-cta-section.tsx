@@ -73,7 +73,7 @@ export default function FinalCtaSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Análise Gratuita em 24h</h3>
-                  <p className="text-sm opacity-80">Avaliamos sua presença digital atual e identificamos oportunidades de crescimento</p>
+                  <p className="text-sm text-gray-300">Avaliamos sua presença digital atual e identificamos oportunidades de crescimento</p>
                 </div>
               </div>
 
@@ -83,7 +83,7 @@ export default function FinalCtaSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Consultoria Especializada</h3>
-                  <p className="text-sm opacity-80">Equipe dedicada com experiência em marketing médico e regulamentações do CFM</p>
+                  <p className="text-sm text-gray-300">Equipe dedicada com experiência em marketing médico e regulamentações do CFM</p>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export default function FinalCtaSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">100% Ético e Regulamentado</h3>
-                  <p className="text-sm opacity-80">Todas nossas estratégias respeitam as diretrizes do Conselho Federal de Medicina</p>
+                  <p className="text-sm text-gray-300">Todas nossas estratégias respeitam as diretrizes do Conselho Federal de Medicina</p>
                 </div>
               </div>
             </div>

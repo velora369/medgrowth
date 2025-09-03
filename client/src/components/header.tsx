@@ -56,7 +56,7 @@ export default function Header() {
           <div className="flex items-center" data-testid="logo">
             <img 
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
-              alt="MedGrowth Logo"
+              alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
               className="h-10 w-auto"
             />
           </div>
@@ -139,7 +139,7 @@ export default function Header() {
             <div className="flex items-center">
               <img 
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
-                alt="MedGrowth Logo"
+                alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
                 className="h-8 w-auto"
               />
             </div>

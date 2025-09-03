@@ -73,7 +73,7 @@ export default function ServicesSection() {
               <Globe className="text-medgrowth-cyan w-8 h-8" />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Produto 360 Médico</h3>
-            <p className="text-lg mb-6 opacity-90">
+            <p className="text-lg mb-6 text-gray-100">
               Pacote completo: identidade visual, site, redes sociais, tráfego pago, branding e suporte contínuo
             </p>
             <a
@@ -92,7 +92,7 @@ export default function ServicesSection() {
         {/* Additional Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <Dialog>
-            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-2 border border-medgrowth-cyan/10" data-testid="service-social-media">
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-2 border border-medgrowth-cyan/10" data-testid="service-social-media">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Instagram className="text-medgrowth-cyan w-6 h-6" />
               </div>
@@ -151,7 +151,7 @@ export default function ServicesSection() {
           </Dialog>
 
           <Dialog>
-            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-3 border border-medgrowth-cyan/10" data-testid="service-paid-traffic">
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-3 border border-medgrowth-cyan/10" data-testid="service-paid-traffic">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Megaphone className="text-medgrowth-cyan w-6 h-6" />
               </div>
@@ -210,7 +210,7 @@ export default function ServicesSection() {
           </Dialog>
 
           <Dialog>
-            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-4 border border-medgrowth-cyan/10" data-testid="service-branding">
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-4 border border-medgrowth-cyan/10" data-testid="service-branding">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Palette className="text-medgrowth-cyan w-6 h-6" />
               </div>
@@ -269,7 +269,7 @@ export default function ServicesSection() {
           </Dialog>
 
           <Dialog>
-            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-5 border border-medgrowth-cyan/10" data-testid="service-ai-automation">
+            <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 service-card group fade-in-up-delay-5 border border-medgrowth-cyan/10" data-testid="service-ai-automation">
               <div className="w-12 h-12 bg-medgrowth-cyan/10 rounded-lg flex items-center justify-center mb-4">
                 <Bot className="text-medgrowth-cyan w-6 h-6" />
               </div>
