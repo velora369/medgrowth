@@ -100,11 +100,11 @@ export default function ServicesSection() {
               <p className="text-muted-foreground text-sm mb-4">Engaje pacientes e construa autoridade digital de forma consistente e ética</p>
               <DialogTrigger asChild>
                 <Button 
-                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300 text-xs py-2.5 px-3" 
                   data-testid="learn-more-social"
                 >
-                  <span>Ver estratégias de redes sociais</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <span>Ver estratégias</span>
+                  <ArrowRight className="w-3 h-3 ml-1" />
                 </Button>
               </DialogTrigger>
             </div>
@@ -140,7 +140,7 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Gestão de Redes Sociais para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-6 py-4 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-base min-h-[48px]"
                   data-testid="social-media-whatsapp-cta"
                 >
                   <i className="fab fa-whatsapp"></i>
@@ -159,11 +159,11 @@ export default function ServicesSection() {
               <p className="text-muted-foreground text-sm mb-4">Atraia pacientes qualificados imediatamente com campanhas otimizadas</p>
               <DialogTrigger asChild>
                 <Button 
-                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300 text-xs py-2.5 px-3" 
                   data-testid="learn-more-traffic"
                 >
-                  <span>Ver campanhas de tráfego pago</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <span>Ver campanhas</span>
+                  <ArrowRight className="w-3 h-3 ml-1" />
                 </Button>
               </DialogTrigger>
             </div>
@@ -199,7 +199,7 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Tráfego Pago para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-6 py-4 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-base min-h-[48px]"
                   data-testid="traffic-whatsapp-cta"
                 >
                   <i className="fab fa-whatsapp"></i>
@@ -218,11 +218,11 @@ export default function ServicesSection() {
               <p className="text-muted-foreground text-sm mb-4">Torne-se memorável no digital com identidade visual profissional</p>
               <DialogTrigger asChild>
                 <Button 
-                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300 text-xs py-2.5 px-3" 
                   data-testid="learn-more-branding"
                 >
-                  <span>Conhecer nossa identidade visual</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <span>Conhecer identidade</span>
+                  <ArrowRight className="w-3 h-3 ml-1" />
                 </Button>
               </DialogTrigger>
             </div>
@@ -258,7 +258,7 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Branding e Identidade para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-6 py-4 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-base min-h-[48px]"
                   data-testid="branding-whatsapp-cta"
                 >
                   <i className="fab fa-whatsapp"></i>
@@ -277,11 +277,11 @@ export default function ServicesSection() {
               <p className="text-muted-foreground text-sm mb-4">Ganhe tempo com processos inteligentes e atendimento automatizado</p>
               <DialogTrigger asChild>
                 <Button 
-                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300" 
+                  className="w-full bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white border-none hover:shadow-lg hover:scale-105 transition-all duration-300 text-xs py-2.5 px-3" 
                   data-testid="learn-more-ai"
                 >
-                  <span>Descobrir automações inteligentes</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <span>Descobrir automações</span>
+                  <ArrowRight className="w-3 h-3 ml-1" />
                 </Button>
               </DialogTrigger>
             </div>
@@ -317,7 +317,7 @@ export default function ServicesSection() {
                   href="https://wa.me/5561996301406?text=Olá! Gostaria de saber mais sobre Automações com IA para médicos"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-4 py-3 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-sm"
+                  className="flex items-center justify-center space-x-2 bg-medgrowth-cyan text-white px-6 py-4 rounded-lg font-semibold hover:bg-medgrowth-dark transition-colors w-full text-base min-h-[48px]"
                   data-testid="ai-whatsapp-cta"
                 >
                   <i className="fab fa-whatsapp"></i>
