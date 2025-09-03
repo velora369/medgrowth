@@ -50,14 +50,14 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-medgrowth-cyan shadow-sm transition-all duration-300">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0" data-testid="logo">
             <img 
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
               alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
-              className="h-10 w-auto"
+              className="h-7 w-auto"
             />
           </div>
 
