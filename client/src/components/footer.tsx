@@ -23,7 +23,10 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
               <div>
-                <h3 className="text-xl font-bold">MedGrowth</h3>
+                <h3 className="text-xl font-bold">
+                  <span className="text-medgrowth-cyan">Med</span>
+                  <span className="text-medgrowth-dark">Growth</span>
+                </h3>
               </div>
             </div>
             <p className="text-sm text-gray-600 mb-4 max-w-md" data-testid="footer-description">
