@@ -23,7 +23,7 @@ export default function Footer() {
                 className="h-24 md:h-28 w-auto pl-[0px] pr-[0px] ml-[-16px] mr-[-16px] mt-[-41px] mb-[-41px] pt-[-5px] pb-[-5px]"
               />
             </div>
-            <p className="text-sm text-gray-600 max-w-md mt-[-23px] mb-[-23px]" data-testid="footer-description">
+            <p className="text-sm text-gray-600 max-w-md mt-[-1px] mb-[-1px] pl-[0px] pr-[0px] pt-[0px] pb-[0px]" data-testid="footer-description">
               Sua autoridade digital, nosso compromisso. Construindo o futuro digital da medicina com ética, inovação e resultados reais.
             </p>
           </div>
