@@ -24,7 +24,6 @@ export default function Footer() {
               />
               <div>
                 <h3 className="text-xl font-bold">MedGrowth</h3>
-                <p className="text-sm text-gray-600">Crescer Juntos</p>
               </div>
             </div>
             <p className="text-sm text-gray-600 mb-4 max-w-md" data-testid="footer-description">
