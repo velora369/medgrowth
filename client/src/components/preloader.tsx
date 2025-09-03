@@ -11,7 +11,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onComplete, 500); // Aguarda a animação de saída
-    }, 3000); // Preloader fica visível por 3 segundos
+    }, 4000); // Preloader fica visível por 4 segundos
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -21,8 +21,11 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       <div className="preloader-exit">
         <div className="preloader-content">
           <div className="preloader-logo">
-            <h1 className="preloader-title">MedGrowth</h1>
-            <p className="preloader-subtitle">Crescer Juntos</p>
+            <img 
+              src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp" 
+              alt="MedGrowth Logo" 
+              className="preloader-logo-image"
+            />
           </div>
         </div>
       </div>
@@ -34,8 +37,11 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       <div className="preloader-background"></div>
       <div className="preloader-content">
         <div className="preloader-logo">
-          <h1 className="preloader-title">MedGrowth</h1>
-          <p className="preloader-subtitle">Crescer Juntos</p>
+          <img 
+            src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp" 
+            alt="MedGrowth Logo" 
+            className="preloader-logo-image"
+          />
         </div>
         <div className="preloader-animation">
           <div className="pulse-circle pulse-1"></div>
