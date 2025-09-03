@@ -65,7 +65,7 @@ export default function Footer() {
                   className="text-gray-600 hover:text-medgrowth-cyan transition-colors text-left relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                   data-testid="footer-nav-cases"
                 >
-                  Casos de Sucesso
+                  Depoimentos
                 </button>
               </li>
               <li>
