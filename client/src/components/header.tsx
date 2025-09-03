@@ -53,7 +53,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center" data-testid="logo">
+          <div className="flex items-center flex-shrink-0" data-testid="logo">
             <img 
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
               alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
@@ -61,45 +61,47 @@ export default function Header() {
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <div className={`hidden md:flex items-center space-x-8 transition-all duration-300 ${
-            isScrolling ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-          }`}>
-            <button
-              onClick={() => handleNavClick("#home")}
-              className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
-              data-testid="nav-home"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => handleNavClick("#quem-somos")}
-              className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
-              data-testid="nav-about"
-            >
-              Quem Somos
-            </button>
-            <button
-              onClick={() => handleNavClick("#servicos")}
-              className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
-              data-testid="nav-services"
-            >
-              Serviços
-            </button>
-            <button
-              onClick={() => handleNavClick("#casos-sucesso")}
-              className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
-              data-testid="nav-cases"
-            >
-              Casos de Sucesso
-            </button>
-            <button
-              onClick={() => handleNavClick("#contato")}
-              className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
-              data-testid="nav-contact"
-            >
-              Contato
-            </button>
+          {/* Desktop Navigation - Centralized */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className={`flex items-center space-x-8 transition-all duration-300 ${
+              isScrolling ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
+            }`}>
+              <button
+                onClick={() => handleNavClick("#home")}
+                className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
+                data-testid="nav-home"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => handleNavClick("#quem-somos")}
+                className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
+                data-testid="nav-about"
+              >
+                Quem Somos
+              </button>
+              <button
+                onClick={() => handleNavClick("#servicos")}
+                className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
+                data-testid="nav-services"
+              >
+                Serviços
+              </button>
+              <button
+                onClick={() => handleNavClick("#casos-sucesso")}
+                className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
+                data-testid="nav-cases"
+              >
+                Casos de Sucesso
+              </button>
+              <button
+                onClick={() => handleNavClick("#contato")}
+                className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
+                data-testid="nav-contact"
+              >
+                Contato
+              </button>
+            </div>
           </div>
 
           {/* WhatsApp CTA Button */}
@@ -107,7 +109,7 @@ export default function Header() {
             href="https://wa.me/5561996301406"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-full hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium text-sm"
+            className="hidden md:flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-full hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium text-sm flex-shrink-0"
             data-testid="header-whatsapp-cta"
           >
             <i className="fab fa-whatsapp text-lg"></i>
