@@ -43,10 +43,8 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             className="preloader-logo-image"
           />
         </div>
-        <div className="preloader-animation">
-          <div className="pulse-circle pulse-1"></div>
-          <div className="pulse-circle pulse-2"></div>
-          <div className="pulse-circle pulse-3"></div>
+        <div className="preloader-loading-bar">
+          <div className="loading-bar-fill"></div>
         </div>
       </div>
     </div>
