@@ -1,6 +1,6 @@
 import { ExternalLink, Globe, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogClose, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useState } from "react";
 
 export default function PortfolioSection() {
@@ -85,18 +85,31 @@ export default function PortfolioSection() {
                   </div>
                 </DialogTrigger>
                 
-                <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-transparent shadow-none">
-                  <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-black/50 backdrop-blur-sm p-2 text-white hover:bg-black/70 transition-colors">
+                <DialogContent className="max-w-[100vw] max-h-[100vh] w-full h-full p-4 border-0 bg-black/90 backdrop-blur-sm">
+                  <DialogTitle className="sr-only">
+                    Visualização do site {item.title}
+                  </DialogTitle>
+                  <DialogDescription className="sr-only">
+                    Imagem em tamanho completo do site desenvolvido para {item.title} - {item.specialty}
+                  </DialogDescription>
+                  
+                  <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-white/20 backdrop-blur-sm p-2 text-white hover:bg-white/30 transition-colors">
                     <X className="h-6 w-6" />
                     <span className="sr-only">Fechar</span>
                   </DialogClose>
                   
-                  <div className="relative w-full h-full flex items-center justify-center">
+                  <div className="relative w-full h-full flex items-center justify-center min-h-[80vh]">
                     <img
                       src={item.image}
                       alt={`Visualização completa do site: ${item.title} - ${item.specialty}`}
-                      className="max-w-full max-h-full object-contain rounded-lg"
-                      style={{ maxHeight: '90vh', maxWidth: '90vw' }}
+                      className="max-w-full max-h-full object-contain rounded-lg bg-white"
+                      style={{ 
+                        maxHeight: 'calc(100vh - 80px)', 
+                        maxWidth: 'calc(100vw - 32px)',
+                        minHeight: '200px',
+                        width: 'auto',
+                        height: 'auto'
+                      }}
                     />
                   </div>
                 </DialogContent>
