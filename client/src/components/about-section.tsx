@@ -33,7 +33,7 @@ export default function AboutSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-left">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6" data-testid="about-description">
-                A <strong className="text-medgrowth-cyan">MedGrowth</strong> nasceu para revolucionar o marketing médico. Atuamos como extensão digital da sua clínica, cuidando da sua autoridade online com estratégias sob medida.
+                A <strong className="text-medgrowth-cyan">MedGrowth</strong> nasceu para revolucionar o marketing médico. Atuamos como extensão digital da sua clínica e da sua marca pessoal, cuidando da sua autoridade online com estratégias sob medida.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-6 relative">
