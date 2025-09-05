@@ -57,7 +57,7 @@ export default function ServicesSection() {
     <section id="servicos" className="py-20 bg-medgrowth-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-medgrowth-dark leading-tight" data-testid="services-title">
+          <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-medgrowth-dark leading-tight" data-testid="services-title">
             Soluções Digitais que Geram<br />
             <span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Resultados Reais</span>
           </h2>
