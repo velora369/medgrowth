@@ -100,29 +100,20 @@ export default function AboutSection() {
                   </p>
                 </div>
 
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <div 
-                      className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105 cursor-pointer" 
-                      data-testid="value-partnership"
-                    >
-                      <Handshake className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
-                      <h3 className="font-semibold text-sm mb-3">Parceria</h3>
-                      <p className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 underline-offset-2 hover:underline" data-testid="button-read-more-partnership">
-                        Saiba como trabalhamos juntos
-                      </p>
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md">
-                    <DialogHeader>
-                      <DialogTitle className="text-medgrowth-dark">{valueDetails.partnership.title}</DialogTitle>
-                      <DialogDescription className="sr-only">
-                        Descrição detalhada sobre {valueDetails.partnership.title.toLowerCase()}
-                      </DialogDescription>
-                    </DialogHeader>
-                    <p className="text-gray-600 leading-relaxed">{valueDetails.partnership.description}</p>
-                  </DialogContent>
-                </Dialog>
+                <div 
+                  className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105 cursor-pointer" 
+                  data-testid="value-partnership"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contato');
+                    contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  <Handshake className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
+                  <h3 className="font-semibold text-sm mb-3">Parceria</h3>
+                  <p className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 underline-offset-2 hover:underline" data-testid="button-read-more-partnership">
+                    Saiba como trabalhamos juntos
+                  </p>
+                </div>
               </div>
             </div>
 
