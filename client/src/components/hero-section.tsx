@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight gentle-fade-up" data-testid="hero-title">
           <span className="text-medgrowth-dark">MedGrowth:</span> Sua Jornada para o<br />
-          <span className="text-medgrowth-cyan bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Sucesso Digital</span> Começa Aqui
+          <span className="text-medgrowth-dark">Sucesso </span><span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Digital</span> Começa Aqui
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed font-medium gentle-fade-up-delay" data-testid="hero-subtitle">
