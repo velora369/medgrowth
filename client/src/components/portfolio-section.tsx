@@ -69,18 +69,18 @@ export default function PortfolioSection() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Floating Badge */}
-                <div className="absolute top-4 left-4 bg-medgrowth-cyan text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {item.specialty}
-                </div>
               </div>
 
               {/* Content */}
               <div className="p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold text-medgrowth-dark mb-2 group-hover:text-medgrowth-cyan transition-colors duration-300">
-                  {item.title}
-                </h3>
+                <div className="flex items-center gap-3 mb-2 flex-wrap">
+                  <h3 className="text-xl md:text-2xl font-bold text-medgrowth-dark group-hover:text-medgrowth-cyan transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <span className="bg-medgrowth-cyan text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {item.specialty}
+                  </span>
+                </div>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {item.description}
                 </p>
