@@ -37,105 +37,92 @@ export default function AboutSection() {
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-6 relative">
-                <div 
-                  className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105" 
-                  data-testid="value-ethics"
-                >
-                  <Shield className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
-                  <h3 className="font-semibold text-sm mb-3">Ética</h3>
-                  
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-ethics">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div 
+                      className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105 cursor-pointer" 
+                      data-testid="value-ethics"
+                    >
+                      <Shield className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
+                      <h3 className="font-semibold text-sm mb-3">Ética</h3>
+                      <p className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 underline-offset-2 hover:underline" data-testid="button-read-more-ethics">
                         Ver nossa abordagem ética
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <DialogHeader>
-                        <DialogTitle className="text-medgrowth-dark">{valueDetails.ethics.title}</DialogTitle>
-                        <DialogDescription className="sr-only">
-                          Descrição detalhada sobre {valueDetails.ethics.title.toLowerCase()}
-                        </DialogDescription>
-                      </DialogHeader>
-                      <p className="text-gray-600 leading-relaxed">{valueDetails.ethics.description}</p>
-                    </DialogContent>
-                  </Dialog>
-                </div>
+                      </p>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <DialogHeader>
+                      <DialogTitle className="text-medgrowth-dark">{valueDetails.ethics.title}</DialogTitle>
+                      <DialogDescription className="sr-only">
+                        Descrição detalhada sobre {valueDetails.ethics.title.toLowerCase()}
+                      </DialogDescription>
+                    </DialogHeader>
+                    <p className="text-gray-600 leading-relaxed">{valueDetails.ethics.description}</p>
+                  </DialogContent>
+                </Dialog>
 
-                <div 
-                  className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105" 
-                  data-testid="value-innovation"
-                >
-                  <Lightbulb className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
-                  <h3 className="font-semibold text-sm mb-3">Inovação</h3>
-                  
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-innovation">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div 
+                      className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105 cursor-pointer" 
+                      data-testid="value-innovation"
+                    >
+                      <Lightbulb className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
+                      <h3 className="font-semibold text-sm mb-3">Inovação</h3>
+                      <p className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 underline-offset-2 hover:underline" data-testid="button-read-more-innovation">
                         Conheça nossas inovações
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <DialogHeader>
-                        <DialogTitle className="text-medgrowth-dark">{valueDetails.innovation.title}</DialogTitle>
-                        <DialogDescription className="sr-only">
-                          Descrição detalhada sobre {valueDetails.innovation.title.toLowerCase()}
-                        </DialogDescription>
-                      </DialogHeader>
-                      <p className="text-gray-600 leading-relaxed">{valueDetails.innovation.description}</p>
-                    </DialogContent>
-                  </Dialog>
-                </div>
+                      </p>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <DialogHeader>
+                      <DialogTitle className="text-medgrowth-dark">{valueDetails.innovation.title}</DialogTitle>
+                      <DialogDescription className="sr-only">
+                        Descrição detalhada sobre {valueDetails.innovation.title.toLowerCase()}
+                      </DialogDescription>
+                    </DialogHeader>
+                    <p className="text-gray-600 leading-relaxed">{valueDetails.innovation.description}</p>
+                  </DialogContent>
+                </Dialog>
 
                 <div 
-                  className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105" 
+                  className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105 cursor-pointer" 
                   data-testid="value-results"
+                  onClick={() => {
+                    const testimonialsSection = document.getElementById('depoimentos');
+                    testimonialsSection?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   <TrendingUp className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
                   <h3 className="font-semibold text-sm mb-3">Resultados Reais</h3>
-                  
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-results">
-                        Ver resultados comprovados
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <DialogHeader>
-                        <DialogTitle className="text-medgrowth-dark">{valueDetails.results.title}</DialogTitle>
-                        <DialogDescription className="sr-only">
-                          Descrição detalhada sobre {valueDetails.results.title.toLowerCase()}
-                        </DialogDescription>
-                      </DialogHeader>
-                      <p className="text-gray-600 leading-relaxed">{valueDetails.results.description}</p>
-                    </DialogContent>
-                  </Dialog>
+                  <p className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 underline-offset-2 hover:underline" data-testid="button-read-more-results">
+                    Ver resultados comprovados
+                  </p>
                 </div>
 
-                <div 
-                  className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105" 
-                  data-testid="value-partnership"
-                >
-                  <Handshake className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
-                  <h3 className="font-semibold text-sm mb-3">Parceria</h3>
-                  
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 hover:scale-105 underline-offset-2 hover:underline" data-testid="button-read-more-partnership">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div 
+                      className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105 cursor-pointer" 
+                      data-testid="value-partnership"
+                    >
+                      <Handshake className="w-8 h-8 text-medgrowth-cyan mb-2 mx-auto" />
+                      <h3 className="font-semibold text-sm mb-3">Parceria</h3>
+                      <p className="text-xs text-medgrowth-cyan/70 hover:text-medgrowth-cyan font-medium transition-all duration-200 underline-offset-2 hover:underline" data-testid="button-read-more-partnership">
                         Saiba como trabalhamos juntos
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <DialogHeader>
-                        <DialogTitle className="text-medgrowth-dark">{valueDetails.partnership.title}</DialogTitle>
-                        <DialogDescription className="sr-only">
-                          Descrição detalhada sobre {valueDetails.partnership.title.toLowerCase()}
-                        </DialogDescription>
-                      </DialogHeader>
-                      <p className="text-gray-600 leading-relaxed">{valueDetails.partnership.description}</p>
-                    </DialogContent>
-                  </Dialog>
-                </div>
+                      </p>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <DialogHeader>
+                      <DialogTitle className="text-medgrowth-dark">{valueDetails.partnership.title}</DialogTitle>
+                      <DialogDescription className="sr-only">
+                        Descrição detalhada sobre {valueDetails.partnership.title.toLowerCase()}
+                      </DialogDescription>
+                    </DialogHeader>
+                    <p className="text-gray-600 leading-relaxed">{valueDetails.partnership.description}</p>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
 
