@@ -61,9 +61,6 @@ export default function ServicesSection() {
             Soluções Digitais que Geram<br />
             <span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Resultados Reais</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium" data-testid="services-subtitle">
-            Estratégias sob medida para médicos que buscam crescimento sustentável e autoridade digital
-          </p>
         </div>
 
         {/* Featured Service - 360 Medical Package */}
