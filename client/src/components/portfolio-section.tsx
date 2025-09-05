@@ -1,11 +1,7 @@
-import { ExternalLink, Globe, X } from "lucide-react";
+import { ExternalLink, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger, DialogClose, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { useState } from "react";
 
 export default function PortfolioSection() {
-  const [openImageModal, setOpenImageModal] = useState<number | null>(null);
-
   const portfolioItems = [
     {
       id: 1,
@@ -65,55 +61,25 @@ export default function PortfolioSection() {
               data-testid={`portfolio-item-${item.id}`}
             >
               {/* Image Container */}
-              <Dialog open={openImageModal === item.id} onOpenChange={(open) => setOpenImageModal(open ? item.id : null)}>
-                <DialogTrigger asChild>
-                  <div className="relative overflow-hidden rounded-t-2xl cursor-pointer">
-                    <img
-                      src={item.image}
-                      alt={`Site desenvolvido para ${item.title} - ${item.specialty}`}
-                      className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    
-                    {/* Click indicator */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/90 backdrop-blur-sm rounded-full p-3">
-                        <Globe className="w-6 h-6 text-medgrowth-cyan" />
-                      </div>
-                    </div>
-                  </div>
-                </DialogTrigger>
+              <div 
+                className="relative overflow-hidden rounded-t-2xl cursor-pointer"
+                onClick={() => handleVisitSite(item.link)}
+              >
+                <img
+                  src={item.image}
+                  alt={`Site desenvolvido para ${item.title} - ${item.specialty}`}
+                  className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
-                <DialogContent className="max-w-[100vw] max-h-[100vh] w-full h-full p-4 border-0 bg-black/90 backdrop-blur-sm">
-                  <DialogTitle className="sr-only">
-                    Visualização do site {item.title}
-                  </DialogTitle>
-                  <DialogDescription className="sr-only">
-                    Imagem em tamanho completo do site desenvolvido para {item.title} - {item.specialty}
-                  </DialogDescription>
-                  
-                  <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-white/20 backdrop-blur-sm p-2 text-white hover:bg-white/30 transition-colors">
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Fechar</span>
-                  </DialogClose>
-                  
-                  <div className="relative w-full h-full flex items-center justify-center min-h-[80vh]">
-                    <img
-                      src={item.image}
-                      alt={`Visualização completa do site: ${item.title} - ${item.specialty}`}
-                      className="max-w-full max-h-full object-contain rounded-lg bg-white"
-                      style={{ 
-                        maxHeight: 'calc(100vh - 80px)', 
-                        maxWidth: 'calc(100vw - 32px)',
-                        minHeight: '200px',
-                        width: 'auto',
-                        height: 'auto'
-                      }}
-                    />
+                {/* Click indicator */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-3">
+                    <ExternalLink className="w-6 h-6 text-medgrowth-cyan" />
                   </div>
-                </DialogContent>
-              </Dialog>
+                </div>
+              </div>
 
               {/* Content */}
               <div className="p-6 md:p-8">
