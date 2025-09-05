@@ -89,7 +89,7 @@ export default function AboutSection() {
                   className="text-center p-4 bg-medgrowth-light rounded-lg hover:bg-medgrowth-cyan/10 transition-all duration-300 hover:scale-105 cursor-pointer" 
                   data-testid="value-results"
                   onClick={() => {
-                    const testimonialsSection = document.getElementById('depoimentos');
+                    const testimonialsSection = document.getElementById('casos-sucesso');
                     testimonialsSection?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
