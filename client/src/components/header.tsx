@@ -111,8 +111,9 @@ export default function Header() {
             </div>
           </div>
 
-          {/* WhatsApp CTA Button */}
+          {/* Right Side - CTA Button (Desktop) + Mobile Menu Button */}
           <div className="flex items-center justify-end">
+            {/* WhatsApp CTA Button - Desktop Only */}
             <a
               href="https://wa.me/5561996301406"
               target="_blank"
@@ -123,18 +124,18 @@ export default function Header() {
               <i className="fab fa-whatsapp text-lg"></i>
               <span>Fale Conosco</span>
             </a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden flex-shrink-0"
-            onClick={toggleMobileMenu}
-            data-testid="mobile-menu-toggle"
-          >
-            <Menu className="w-6 h-6" />
-          </Button>
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden p-2 rounded-md hover:bg-medgrowth-cyan/10 transition-colors duration-200"
+              onClick={toggleMobileMenu}
+              data-testid="mobile-menu-toggle"
+            >
+              <Menu className="w-6 h-6 text-medgrowth-dark" />
+            </Button>
+          </div>
         </div>
       </nav>
 
