@@ -133,10 +133,6 @@ export default function AboutSection() {
                 className="rounded-xl shadow-lg w-full h-auto"
                 data-testid="about-image"
               />
-              <div className="absolute -bottom-4 -right-4 bg-medgrowth-cyan text-white p-4 rounded-lg shadow-lg">
-                <i className="fas fa-users text-2xl mb-2"></i>
-                <p className="text-sm font-semibold">Parceria de<br />Longo Prazo</p>
-              </div>
             </div>
           </div>
           
