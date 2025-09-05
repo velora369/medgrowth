@@ -71,10 +71,10 @@ export default function ServicesSection() {
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Produto 360 Médico</h3>
             <p className="text-lg mb-6 text-gray-100">
-              Pacote completo: identidade visual, site, redes sociais, tráfego pago, branding e suporte contínuo
+              Pacote completo: identidade visual, site, redes sociais, tráfego pago, branding, I.A, automações, suporte contínuo e muito mais
             </p>
             <a
-              href="https://wa.me/5561996301406"
+              href="https://wa.me/5561996301406?text=Olá%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20360%20médico"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-white text-medgrowth-cyan px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
