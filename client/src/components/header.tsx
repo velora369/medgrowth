@@ -51,9 +51,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-medgrowth-cyan shadow-sm transition-all duration-300">
       <nav className="container mx-auto px-4 py-2">
-        <div className="flex items-center justify-between">
+        <div className="grid grid-cols-3 items-center w-full">
           {/* Logo */}
-          <div className="flex items-center flex-shrink-0" data-testid="logo">
+          <div className="flex items-center justify-start" data-testid="logo">
             <img 
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
               alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
@@ -61,8 +61,8 @@ export default function Header() {
             />
           </div>
 
-          {/* Desktop Navigation - Better Centered */}
-          <div className="hidden md:flex items-center justify-center flex-1 px-8">
+          {/* Desktop Navigation - Perfectly Centered */}
+          <div className="hidden md:flex items-center justify-center">
             <div className={`flex items-center space-x-8 transition-all duration-300 ${
               isScrolling ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
             }`}>
@@ -112,16 +112,18 @@ export default function Header() {
           </div>
 
           {/* WhatsApp CTA Button */}
-          <a
-            href="https://wa.me/5561996301406"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-full hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium text-sm flex-shrink-0"
-            data-testid="header-whatsapp-cta"
-          >
-            <i className="fab fa-whatsapp text-lg"></i>
-            <span>Fale Conosco</span>
-          </a>
+          <div className="flex items-center justify-end">
+            <a
+              href="https://wa.me/5561996301406"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-full hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium text-sm"
+              data-testid="header-whatsapp-cta"
+            >
+              <i className="fab fa-whatsapp text-lg"></i>
+              <span>Fale Conosco</span>
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <Button
