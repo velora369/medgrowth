@@ -56,9 +56,7 @@ export default function DoctorEvolutionSection() {
             {doctorResults.map((doctor, index) => (
               <div
                 key={index}
-                className={`group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 ${
-                  doctor.featured ? 'md:scale-110 z-10' : 'hover:scale-105'
-                }`}
+                className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:scale-105"
                 data-testid={`doctor-card-${index}`}
               >
                 {/* Featured Badge */}
@@ -169,7 +167,7 @@ export default function DoctorEvolutionSection() {
             </p>
           </div>
           <a
-            href="https://wa.me/5561996301406?text=Olá! Vi os resultados incríveis dos médicos e gostaria de uma análise gratuita para meu consultório"
+            href="https://wa.me/5561996301406?text=Olá! Vi os resultados incríveis dos médicos nas redes sociais e gostaria de uma análise gratuita!"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
