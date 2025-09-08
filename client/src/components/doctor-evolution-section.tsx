@@ -1,6 +1,12 @@
-import { TrendingUp, Eye, ExternalLink, Instagram } from "lucide-react";
+import { TrendingUp, Eye, ExternalLink, Instagram, BarChart3 } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area } from "recharts";
 
 export default function DoctorEvolutionSection() {
+  const [openChart, setOpenChart] = useState<string | null>(null);
+
   const doctorResults = [
     {
       name: "Dr. Marcos Trindade",
@@ -9,7 +15,13 @@ export default function DoctorEvolutionSection() {
       views: "36 mil",
       viewsPeriod: "últimos 30 dias",
       image: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/dr-marcos.webp",
-      instagramLink: "https://www.instagram.com/reel/DKNdPwfvat-/?igsh=MWtod2pzbzd5aDVtMg=="
+      instagramLink: "https://www.instagram.com/reel/DKNdPwfvat-/?igsh=MWtod2pzbzd5aDVtMg==",
+      chartData: [
+        { month: "Mês 0", seguidores: 850, visualizacoes: 8000 },
+        { month: "Mês 1", seguidores: 1420, visualizacoes: 15000 },
+        { month: "Mês 2", seguidores: 2180, visualizacoes: 25000 },
+        { month: "Mês 3", seguidores: 3269, visualizacoes: 36000 }
+      ]
     },
     {
       name: "Dra. Raquel Saraiva",
@@ -18,7 +30,13 @@ export default function DoctorEvolutionSection() {
       views: "27,8 mil",
       viewsPeriod: "últimos 30 dias",
       image: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/dra-raquel.webp",
-      instagramLink: "https://www.instagram.com/reel/DLlTPE_O40h/?igsh=N3o2MjR1ZTU1NHM0"
+      instagramLink: "https://www.instagram.com/reel/DLlTPE_O40h/?igsh=N3o2MjR1ZTU1NHM0",
+      chartData: [
+        { month: "Mês 0", seguidores: 1200, visualizacoes: 12000 },
+        { month: "Mês 1", seguidores: 2350, visualizacoes: 18500 },
+        { month: "Mês 2", seguidores: 4100, visualizacoes: 23200 },
+        { month: "Mês 3", seguidores: 5775, visualizacoes: 27800 }
+      ]
     },
     {
       name: "Dra. Carol Salles",
@@ -28,9 +46,34 @@ export default function DoctorEvolutionSection() {
       viewsPeriod: "últimos 30 dias",
       image: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/dra-caroll.webp",
       instagramLink: "https://www.instagram.com/reel/DL0IWM5JRtx/?igsh=ZXZ1bHRyNjFubXR1",
-      featured: true
+      featured: true,
+      chartData: [
+        { month: "Mês 0", seguidores: 2100, visualizacoes: 25000 },
+        { month: "Mês 1", seguidores: 4300, visualizacoes: 42000 },
+        { month: "Mês 2", seguidores: 6800, visualizacoes: 58000 },
+        { month: "Mês 3", seguidores: 9200, visualizacoes: 71000 },
+        { month: "Mês 4", seguidores: 11900, visualizacoes: 88000 },
+        { month: "Mês 5", seguidores: 13500, visualizacoes: 95000 },
+        { month: "Mês 6", seguidores: 14800, visualizacoes: 109400 }
+      ]
     }
   ];
+
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white p-4 rounded-lg shadow-lg border border-medgrowth-cyan/20">
+          <p className="font-semibold text-medgrowth-dark">{label}</p>
+          {payload.map((entry: any, index: number) => (
+            <p key={index} style={{ color: entry.color }} className="text-sm">
+              {entry.dataKey === 'seguidores' ? 'Seguidores' : 'Visualizações'}: {entry.value.toLocaleString()}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <section id="evolucao-doutores" className="py-20 bg-gradient-to-b from-white to-medgrowth-light">
