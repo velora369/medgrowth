@@ -17,10 +17,10 @@ export default function DoctorEvolutionSection() {
       image: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/dr-marcos.webp",
       instagramLink: "https://www.instagram.com/reel/DKNdPwfvat-/?igsh=MWtod2pzbzd5aDVtMg==",
       chartData: [
-        { month: "Mês 0", seguidores: 850, visualizacoes: 8000 },
-        { month: "Mês 1", seguidores: 1420, visualizacoes: 15000 },
-        { month: "Mês 2", seguidores: 2180, visualizacoes: 25000 },
-        { month: "Mês 3", seguidores: 3269, visualizacoes: 36000 }
+        { month: "Mês 0", seguidores: 1, visualizacoes: 8000 },
+        { month: "Mês 1", seguidores: 800, visualizacoes: 15000 },
+        { month: "Mês 2", seguidores: 1600, visualizacoes: 25000 },
+        { month: "Mês 3", seguidores: 2420, visualizacoes: 36000 }
       ]
     },
     {
@@ -32,10 +32,10 @@ export default function DoctorEvolutionSection() {
       image: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/dra-raquel.webp",
       instagramLink: "https://www.instagram.com/reel/DLlTPE_O40h/?igsh=N3o2MjR1ZTU1NHM0",
       chartData: [
-        { month: "Mês 0", seguidores: 1200, visualizacoes: 12000 },
-        { month: "Mês 1", seguidores: 2350, visualizacoes: 18500 },
-        { month: "Mês 2", seguidores: 4100, visualizacoes: 23200 },
-        { month: "Mês 3", seguidores: 5775, visualizacoes: 27800 }
+        { month: "Mês 0", seguidores: 9, visualizacoes: 12000 },
+        { month: "Mês 1", seguidores: 1500, visualizacoes: 18500 },
+        { month: "Mês 2", seguidores: 3000, visualizacoes: 23200 },
+        { month: "Mês 3", seguidores: 4584, visualizacoes: 27800 }
       ]
     },
     {
@@ -48,13 +48,13 @@ export default function DoctorEvolutionSection() {
       instagramLink: "https://www.instagram.com/reel/DL0IWM5JRtx/?igsh=ZXZ1bHRyNjFubXR1",
       featured: true,
       chartData: [
-        { month: "Mês 0", seguidores: 2100, visualizacoes: 25000 },
-        { month: "Mês 1", seguidores: 4300, visualizacoes: 42000 },
-        { month: "Mês 2", seguidores: 6800, visualizacoes: 58000 },
-        { month: "Mês 3", seguidores: 9200, visualizacoes: 71000 },
-        { month: "Mês 4", seguidores: 11900, visualizacoes: 88000 },
-        { month: "Mês 5", seguidores: 13500, visualizacoes: 95000 },
-        { month: "Mês 6", seguidores: 14800, visualizacoes: 109400 }
+        { month: "Mês 0", seguidores: 100, visualizacoes: 25000 },
+        { month: "Mês 1", seguidores: 2200, visualizacoes: 42000 },
+        { month: "Mês 2", seguidores: 4500, visualizacoes: 58000 },
+        { month: "Mês 3", seguidores: 6800, visualizacoes: 71000 },
+        { month: "Mês 4", seguidores: 9200, visualizacoes: 88000 },
+        { month: "Mês 5", seguidores: 11000, visualizacoes: 95000 },
+        { month: "Mês 6", seguidores: 12700, visualizacoes: 109400 }
       ]
     }
   ];
