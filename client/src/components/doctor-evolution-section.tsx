@@ -111,8 +111,8 @@ export default function DoctorEvolutionSection() {
                           <p className="text-sm text-gray-600">em {doctor.period}</p>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <p className="text-2xl md:text-3xl font-bold text-medgrowth-dark" data-testid={`doctor-followers-${index}`}>
+                      <div className="text-right min-w-[80px]">
+                        <p className="text-2xl md:text-3xl font-bold text-medgrowth-dark whitespace-nowrap" data-testid={`doctor-followers-${index}`}>
                           {doctor.followers}
                         </p>
                       </div>
@@ -129,8 +129,8 @@ export default function DoctorEvolutionSection() {
                           <p className="text-sm text-gray-600">{doctor.viewsPeriod}</p>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <p className="text-2xl md:text-3xl font-bold text-medgrowth-dark" data-testid={`doctor-views-${index}`}>
+                      <div className="text-right min-w-[80px]">
+                        <p className="text-2xl md:text-3xl font-bold text-medgrowth-dark whitespace-nowrap" data-testid={`doctor-views-${index}`}>
                           {doctor.views}
                         </p>
                       </div>
