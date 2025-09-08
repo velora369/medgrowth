@@ -180,8 +180,8 @@ export default function DoctorEvolutionSection() {
                     </div>
                   </div>
 
-                  {/* View Results Button */}
-                  <div className="mt-6">
+                  {/* Action Buttons */}
+                  <div className="mt-6 space-y-3">
                     <a
                       href={doctor.instagramLink}
                       target="_blank"
@@ -192,6 +192,102 @@ export default function DoctorEvolutionSection() {
                       <span>Ver Resultados</span>
                       <ExternalLink className="w-4 h-4 group-hover/button:translate-x-1 transition-transform" />
                     </a>
+                    
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button 
+                          className="w-full bg-white text-medgrowth-dark border-2 border-medgrowth-cyan hover:bg-medgrowth-cyan hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                          data-testid={`doctor-chart-${index}`}
+                        >
+                          <BarChart3 className="w-4 h-4 mr-2" />
+                          Ver Gráfico
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl w-full bg-white border border-medgrowth-cyan/20 shadow-2xl">
+                        <DialogTitle className="text-2xl font-bold text-medgrowth-dark mb-2">
+                          Evolução de {doctor.name}
+                        </DialogTitle>
+                        <DialogDescription className="text-gray-600 mb-6">
+                          Acompanhe o crescimento impressionante nas redes sociais ao longo de {doctor.period}
+                        </DialogDescription>
+                        
+                        <div className="w-full h-96 mb-6">
+                          <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart data={doctor.chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                              <defs>
+                                <linearGradient id={`colorSeguidores${index}`} x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="5%" stopColor="#06B6D4" stopOpacity={0.3}/>
+                                  <stop offset="95%" stopColor="#06B6D4" stopOpacity={0}/>
+                                </linearGradient>
+                                <linearGradient id={`colorVisualizacoes${index}`} x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="5%" stopColor="#1E40AF" stopOpacity={0.3}/>
+                                  <stop offset="95%" stopColor="#1E40AF" stopOpacity={0}/>
+                                </linearGradient>
+                              </defs>
+                              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                              <XAxis 
+                                dataKey="month" 
+                                tick={{ fontSize: 12, fill: '#64748b' }}
+                                tickLine={{ stroke: '#e2e8f0' }}
+                              />
+                              <YAxis 
+                                tick={{ fontSize: 12, fill: '#64748b' }}
+                                tickLine={{ stroke: '#e2e8f0' }}
+                                axisLine={{ stroke: '#e2e8f0' }}
+                              />
+                              <Tooltip content={<CustomTooltip />} />
+                              <Legend 
+                                wrapperStyle={{ paddingTop: '20px' }}
+                                iconType="circle"
+                              />
+                              <Area
+                                type="monotone"
+                                dataKey="seguidores"
+                                stackId="1"
+                                stroke="#06B6D4"
+                                strokeWidth={3}
+                                fillOpacity={1}
+                                fill={`url(#colorSeguidores${index})`}
+                                name="Seguidores"
+                              />
+                              <Area
+                                type="monotone"
+                                dataKey="visualizacoes"
+                                stackId="2"
+                                stroke="#1E40AF"
+                                strokeWidth={3}
+                                fillOpacity={1}
+                                fill={`url(#colorVisualizacoes${index})`}
+                                name="Visualizações"
+                              />
+                            </AreaChart>
+                          </ResponsiveContainer>
+                        </div>
+
+                        <div className="flex justify-between items-center bg-gradient-to-r from-medgrowth-cyan/5 to-medgrowth-dark/5 p-4 rounded-xl">
+                          <div className="text-center">
+                            <p className="text-sm text-gray-600 mb-1">Crescimento de Seguidores</p>
+                            <p className="text-2xl font-bold text-medgrowth-dark">{doctor.followers}</p>
+                            <p className="text-sm text-medgrowth-cyan">em {doctor.period}</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-sm text-gray-600 mb-1">Visualizações Mensais</p>
+                            <p className="text-2xl font-bold text-medgrowth-dark">{doctor.views}</p>
+                            <p className="text-sm text-medgrowth-dark">{doctor.viewsPeriod}</p>
+                          </div>
+                          <div className="text-center">
+                            <a
+                              href="https://wa.me/5561996301406?text=Olá! Vi os gráficos de crescimento e gostaria de resultados assim para meu consultório!"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                            >
+                              Quero Resultados Assim
+                            </a>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
               </div>
