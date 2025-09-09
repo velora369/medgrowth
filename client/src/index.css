@@ -303,65 +303,65 @@
     }
   }
 
-  /* Animações sutis de montagem */
+  /* Animações otimizadas para performance - usando transform e will-change */
   .gentle-fade-up {
-    animation: gentleFadeUp 1s ease-out forwards;
     opacity: 0;
-    transform: translateY(15px);
+    transform: translate3d(0, 15px, 0);
+    animation: gentleFadeUp 0.6s ease-out forwards;
   }
 
   .gentle-fade-up-delay {
-    animation: gentleFadeUp 1s ease-out 0.3s forwards;
     opacity: 0;
-    transform: translateY(15px);
+    transform: translate3d(0, 15px, 0);
+    animation: gentleFadeUp 0.6s ease-out 0.2s forwards;
   }
 
   .gentle-fade-up-delay-2 {
-    animation: gentleFadeUp 1s ease-out 0.6s forwards;
     opacity: 0;
-    transform: translateY(15px);
+    transform: translate3d(0, 15px, 0);
+    animation: gentleFadeUp 0.6s ease-out 0.4s forwards;
   }
 
   @keyframes gentleFadeUp {
     0% {
       opacity: 0;
-      transform: translateY(15px);
+      transform: translate3d(0, 15px, 0);
     }
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
-  /* Animações de entrada suaves para outros elementos */
+  /* Animações de entrada otimizadas */
   .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 20px, 0);
+    animation: fadeInUp 0.5s ease-out forwards;
   }
 
   .fade-in-up-delay-1 {
-    animation: fadeInUp 0.8s ease-out 0.2s forwards;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 20px, 0);
+    animation: fadeInUp 0.5s ease-out 0.1s forwards;
   }
 
   .fade-in-up-delay-2 {
-    animation: fadeInUp 0.8s ease-out 0.4s forwards;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 20px, 0);
+    animation: fadeInUp 0.5s ease-out 0.2s forwards;
   }
 
   .fade-in-up-delay-3 {
-    animation: fadeInUp 0.8s ease-out 0.6s forwards;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 20px, 0);
+    animation: fadeInUp 0.5s ease-out 0.3s forwards;
   }
 
   @keyframes fadeInUp {
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -371,30 +371,47 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   }
 
+  /* Interações otimizadas - usando transform para performance */
+  .cta-button {
+    will-change: transform;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
   .cta-button:hover {
     background-color: hsl(187, 67%, 45%);
-    transform: translateY(-1px);
-    transition: all 0.2s ease;
+    transform: translate3d(0, -1px, 0);
+  }
+
+  .service-card {
+    will-change: transform, box-shadow;
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.3s ease;
   }
 
   .service-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(4, 68, 90, 0.15), 0 10px 20px rgba(53, 204, 219, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transform: translate3d(0, -4px, 0) scale3d(1.01, 1.01, 1);
+    box-shadow: 0 10px 25px rgba(4, 68, 90, 0.12), 0 4px 10px rgba(53, 204, 219, 0.08);
   }
 
-  /* Microinterações modernas */
+  /* Microinterações otimizadas */
+  .glow-on-hover {
+    transition: box-shadow 0.3s ease;
+  }
+  
   .glow-on-hover:hover {
-    box-shadow: 0 0 30px rgba(53, 204, 219, 0.3);
+    box-shadow: 0 0 20px rgba(53, 204, 219, 0.25);
   }
 
+  .scale-on-hover {
+    will-change: transform;
+    transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
   .scale-on-hover:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transform: scale3d(1.02, 1.02, 1);
   }
 
   .smooth-transition {
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
   }
 
   .mobile-menu {

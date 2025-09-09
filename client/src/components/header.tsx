@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,10 +55,13 @@ export default function Header() {
         <div className="relative flex items-center justify-between w-full">
           {/* Logo */}
           <div className="flex items-center justify-start" data-testid="logo">
-            <img 
+            <OptimizedImage
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
               alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
               className="h-7 w-auto cursor-pointer hover:opacity-80 transition-opacity duration-200"
+              height={28}
+              priority={true}
+              placeholder={false}
               onClick={() => handleNavClick("#home")}
             />
           </div>
@@ -156,10 +160,13 @@ export default function Header() {
           {/* Header */}
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center">
-              <img 
+              <OptimizedImage
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
                 alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
                 className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity duration-200"
+                height={40}
+                priority={true}
+                placeholder={false}
                 onClick={() => handleNavClick("#home")}
               />
             </div>
