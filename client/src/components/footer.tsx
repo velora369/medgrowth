@@ -17,15 +17,6 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <div className="mb-4" data-testid="footer-logo">
-              <OptimizedImage
-                src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/logo-nome-.webp"
-                alt="MedGrowth - Marketing Digital para Médicos"
-                className="h-24 md:h-28 w-auto mb-2"
-                height={112}
-                placeholder={false}
-              />
-            </div>
             <p className="text-sm text-gray-600 max-w-md" data-testid="footer-description">
               Sua autoridade digital, nosso compromisso. Construindo o futuro digital da medicina com ética, inovação e resultados reais.
             </p>
@@ -119,6 +110,15 @@ export default function Footer() {
                 <i className="fab fa-instagram text-medgrowth-cyan group-hover:animate-pulse"></i>
                 <span className="text-medgrowth-cyan transition-colors">Instagram</span>
               </a>
+              <div className="mt-4" data-testid="footer-logo">
+                <OptimizedImage
+                  src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/logo-nome-.webp"
+                  alt="MedGrowth - Marketing Digital para Médicos"
+                  className="h-16 w-auto"
+                  height={64}
+                  placeholder={false}
+                />
+              </div>
             </div>
           </div>
         </div>
