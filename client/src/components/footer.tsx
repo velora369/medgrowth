@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <div className="flex items-center mb-4" data-testid="footer-logo">
+            <div className="mb-4" data-testid="footer-logo">
               <OptimizedImage
                 src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/logo-nome-.webp"
                 alt="MedGrowth - Marketing Digital para Médicos"
@@ -26,7 +26,7 @@ export default function Footer() {
                 placeholder={false}
               />
             </div>
-            <p className="text-sm text-gray-600 max-w-md mt-2" data-testid="footer-description">
+            <p className="text-sm text-gray-600 max-w-md" data-testid="footer-description">
               Sua autoridade digital, nosso compromisso. Construindo o futuro digital da medicina com ética, inovação e resultados reais.
             </p>
           </div>
