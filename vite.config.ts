@@ -31,7 +31,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', '@radix-ui/react-button'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', '@radix-ui/themes'],
           charts: ['recharts'],
           utils: ['clsx', 'class-variance-authority', 'tailwind-merge']
         }

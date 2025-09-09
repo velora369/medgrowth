@@ -70,7 +70,21 @@ var vite_config_default = defineConfig({
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          ui: ["@radix-ui/react-dialog", "@radix-ui/react-toast", "@radix-ui/themes"],
+          charts: ["recharts"],
+          utils: ["clsx", "class-variance-authority", "tailwind-merge"]
+        }
+      }
+    },
+    target: "es2015",
+    minify: "esbuild",
+    cssMinify: true,
+    reportCompressedSize: false
   },
   server: {
     host: "0.0.0.0",
