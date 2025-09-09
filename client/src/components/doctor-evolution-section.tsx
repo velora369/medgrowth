@@ -1,8 +1,10 @@
 import { TrendingUp, Eye, ExternalLink, Instagram, BarChart3 } from "lucide-react";
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area } from "recharts";
+import { OptimizedImage } from "@/components/ui/optimized-image";
+
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export default function DoctorEvolutionSection() {
   const [openChart, setOpenChart] = useState<string | null>(null);
@@ -113,11 +115,13 @@ export default function DoctorEvolutionSection() {
 
                 {/* Doctor Image */}
                 <div className="relative h-64 md:h-72 overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={doctor.image}
                     alt={doctor.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    data-testid={`doctor-image-${index}`}
+                    width={400}
+                    height={300}
+                    aspectRatio="4/3"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
