@@ -110,15 +110,6 @@ export default function Footer() {
                 <i className="fab fa-instagram text-medgrowth-cyan group-hover:animate-pulse"></i>
                 <span className="text-medgrowth-cyan transition-colors">Instagram</span>
               </a>
-              <div className="mt-4" data-testid="footer-logo">
-                <OptimizedImage
-                  src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/logo-nome-.webp"
-                  alt="MedGrowth - Marketing Digital para Médicos"
-                  className="h-16 w-auto"
-                  height={64}
-                  placeholder={false}
-                />
-              </div>
             </div>
           </div>
         </div>
