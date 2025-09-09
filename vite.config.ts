@@ -27,6 +27,20 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', '@radix-ui/react-button'],
+          charts: ['recharts'],
+          utils: ['clsx', 'class-variance-authority', 'tailwind-merge']
+        }
+      }
+    },
+    target: 'es2015',
+    minify: 'esbuild',
+    cssMinify: true,
+    reportCompressedSize: false
   },
   server: {
     host: "0.0.0.0",

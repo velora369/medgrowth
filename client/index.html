@@ -20,10 +20,20 @@
     <meta name="twitter:title" content="MedGrowth - Crescer Juntos | Marketing Médico Digital" />
     <meta name="twitter:description" content="Estratégias personalizadas de marketing digital para médicos. Construa sua autoridade online com ética e resultados comprovados." />
     
+    <!-- Performance optimized font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <!-- Critical resources preload -->
+    <link rel="preload" href="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//yungwizzeprod2.wordpress.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   </head>
   <body>
     <div id="root"></div>
