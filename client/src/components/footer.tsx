@@ -89,7 +89,7 @@ export default function Footer() {
                 href="https://wa.me/5561996301406"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 transform hover:scale-110 cursor-pointer group"
+                className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 cursor-pointer group"
                 data-testid="footer-whatsapp-link"
               >
                 <i className="fab fa-whatsapp text-medgrowth-cyan group-hover:animate-pulse"></i>
@@ -110,7 +110,7 @@ export default function Footer() {
                     window.open(instagramWeb, '_blank');
                   }, 1000);
                 }}
-                className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 transform hover:scale-110 cursor-pointer group"
+                className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 cursor-pointer group"
                 data-testid="footer-instagram-link"
               >
                 <i className="fab fa-instagram text-medgrowth-cyan group-hover:animate-pulse"></i>

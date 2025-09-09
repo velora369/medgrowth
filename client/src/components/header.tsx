@@ -240,7 +240,7 @@ export default function Header() {
                 href="https://wa.me/5561996301406"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan hover:scale-110 transition-all duration-300 group"
+                className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan transition-all duration-300 group"
                 data-testid="mobile-social-whatsapp"
               >
                 <i className="fab fa-whatsapp text-xl text-medgrowth-cyan group-hover:text-white transition-colors"></i>
@@ -260,7 +260,7 @@ export default function Header() {
                     window.open(instagramWeb, '_blank');
                   }, 1000);
                 }}
-                className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan hover:scale-110 transition-all duration-300 group"
+                className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan transition-all duration-300 group"
                 data-testid="mobile-social-instagram"
               >
                 <i className="fab fa-instagram text-xl text-medgrowth-cyan group-hover:text-white transition-colors"></i>
