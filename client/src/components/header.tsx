@@ -100,7 +100,7 @@ export default function Header() {
                 Portfólio
               </button>
               <button
-                onClick={() => handleNavClick("#casos-sucesso")}
+                onClick={() => handleNavClick("#depoimentos")}
                 className="text-sm font-medium hover:text-medgrowth-cyan transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-medgrowth-cyan after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
                 data-testid="nav-cases"
               >
@@ -212,7 +212,7 @@ export default function Header() {
               Portfólio
             </button>
             <button
-              onClick={() => handleNavClick("#casos-sucesso")}
+              onClick={() => handleNavClick("#depoimentos")}
               className="block text-lg font-medium w-full text-left py-4 px-4 rounded-xl hover:bg-medgrowth-cyan/5 hover:text-medgrowth-cyan transition-all duration-300 border-b border-gray-100"
               data-testid="mobile-nav-cases"
             >

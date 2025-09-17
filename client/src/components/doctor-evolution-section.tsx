@@ -323,7 +323,7 @@ export default function DoctorEvolutionSection() {
         </div>
 
         {/* Depoimentos Exclusivos - VSL Section (Ultra Compacta) */}
-        <div className="max-w-lg mx-auto mt-8 mb-8">
+        <div id="depoimentos" className="max-w-lg mx-auto mt-8 mb-8">
           <div className="text-center mb-4">
             <div className="inline-flex items-center space-x-1 bg-medgrowth-cyan/10 px-2 py-1 rounded-full mb-2">
               <TrendingUp className="w-3 h-3 text-medgrowth-cyan" />
