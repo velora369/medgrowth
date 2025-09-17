@@ -658,22 +658,30 @@
     }
   }
 
-  /* Mobile-specific fixes para background-clip issues */
+  /* Robust gradient text class - mobile-safe */
+  .gradient-text {
+    display: inline-block;
+    background-image: linear-gradient(90deg, #35ccdb, #1a365d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    contain: paint;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Mobile-specific fixes - remove transforms to avoid WebKit bug */
   @media screen and (max-width: 768px) {
-    /* Forçar visibilidade no mobile com máxima especificidade */
-    .hero-title-entrance .hero-title-part-4.text-transparent,
-    .hero-entrance-active .hero-title-part-4.text-transparent,
-    .hero-entrance-inactive .hero-title-part-4.text-transparent,
-    .hero-title-part-4 {
-      color: #35ccdb !important;
-      -webkit-text-fill-color: #35ccdb !important;
+    .hero-entrance-active .hero-title-part-4 {
+      transform: none !important;
+      animation: fadeInMobile 0.8s ease-out 0.8s forwards;
     }
     
-    /* Remover completamente o background-clip no mobile */
-    .hero-title-part-4 {
-      background: none !important;
-      -webkit-background-clip: initial !important;
-      background-clip: initial !important;
+    @keyframes fadeInMobile {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   }
 

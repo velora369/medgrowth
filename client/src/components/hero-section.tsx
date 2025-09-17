@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight hero-title-entrance" data-testid="hero-title">
           <span className="text-medgrowth-dark hero-title-part-1">MedGrowth:</span> <span className="hero-title-part-2">Sua Jornada para o<br /></span>
-          <span className="text-medgrowth-dark hero-title-part-3">Sucesso </span><span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent hero-title-part-4">Digital</span> <span className="hero-title-part-5">Começa Aqui</span>
+          <span className="text-medgrowth-dark hero-title-part-3">Sucesso </span><span className="gradient-text hero-title-part-4">Digital</span> <span className="hero-title-part-5">Começa Aqui</span>
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed font-medium hero-subtitle-entrance" data-testid="hero-subtitle">
