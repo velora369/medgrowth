@@ -660,39 +660,20 @@
 
   /* Mobile-specific fixes para background-clip issues */
   @media screen and (max-width: 768px) {
-    /* Garantir visibilidade no mobile sobrepondo o text-transparent do Tailwind */
-    .hero-title-part-4,
-    .hero-title-part-4.text-transparent {
+    /* Forçar visibilidade no mobile com máxima especificidade */
+    .hero-title-entrance .hero-title-part-4.text-transparent,
+    .hero-entrance-active .hero-title-part-4.text-transparent,
+    .hero-entrance-inactive .hero-title-part-4.text-transparent,
+    .hero-title-part-4 {
       color: #35ccdb !important;
+      -webkit-text-fill-color: #35ccdb !important;
     }
     
-    .hero-entrance-active .hero-title-part-4 {
-      /* Fallback de cor no mobile caso o gradient falhe */
-      color: #35ccdb !important;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
-    
-    /* Garantir que a animação do gradient funcione no mobile */
-    @keyframes gradientRevealMobile {
-      0% {
-        background-size: 0% 100%;
-        -webkit-text-fill-color: #35ccdb;
-      }
-      50% {
-        background-size: 50% 100%;
-        -webkit-text-fill-color: transparent;
-      }
-      100% {
-        background-size: 100% 100%;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-    
-    .hero-entrance-active .hero-title-part-4 {
-      animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.8s forwards,
-                 gradientRevealMobile 1.2s ease-out 1.0s forwards;
+    /* Remover completamente o background-clip no mobile */
+    .hero-title-part-4 {
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      background-clip: initial !important;
     }
   }
 
