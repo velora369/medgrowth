@@ -672,16 +672,47 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Dual-layer fallback system for gradient text */
+  .hero-gradient-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hero-gradient-fallback {
+    position: absolute;
+    inset: 0;
+    color: #1a365d;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .hero-gradient-wrapper .gradient-text {
+    position: relative;
+    z-index: 1;
+  }
+
   /* Mobile-specific fixes - remove transforms to avoid WebKit bug */
   @media screen and (max-width: 768px) {
     .hero-entrance-active .hero-title-part-4 {
       transform: none !important;
+      background-size: 100% 100% !important;
       animation: fadeInMobile 0.8s ease-out 0.8s forwards;
     }
     
     @keyframes fadeInMobile {
       from { opacity: 0; }
       to { opacity: 1; }
+    }
+  }
+
+  /* Extra safety for iOS old versions: fully bypass gradient on mobile */
+  @supports (-webkit-touch-callout: none) {
+    @media (max-width: 768px) {
+      .hero-gradient-wrapper .gradient-text {
+        -webkit-text-fill-color: currentColor;
+        color: #1a365d;
+        background: none;
+      }
     }
   }
 
