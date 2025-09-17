@@ -461,12 +461,22 @@
     animation: heroBackgroundFadeIn 1s ease-out 0.1s forwards;
   }
 
-  /* Initial states - elementos ocultos antes da animação */
-  :not(.hero-entrance-active) .hero-title-entrance,
-  :not(.hero-entrance-active) .hero-subtitle-entrance,
-  :not(.hero-entrance-active) .hero-cta-entrance {
+  /* Estados seguros - garante visibilidade */
+  .hero-title-entrance,
+  .hero-subtitle-entrance,
+  .hero-cta-entrance {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Apenas oculta quando preloader ainda está ativo */
+  .hero-entrance-inactive .hero-title-entrance,
+  .hero-entrance-inactive .hero-subtitle-entrance,
+  .hero-entrance-inactive .hero-cta-entrance {
     opacity: 0;
-    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
   }
 
   /* Título - animação de montagem palavra por palavra */
@@ -600,6 +610,28 @@
     will-change: transform, opacity;
   }
 
+  /* Safety fallback - ensures content is always visible after timeout */
+  .hero-title-entrance,
+  .hero-subtitle-entrance,
+  .hero-cta-entrance {
+    animation-fill-mode: forwards !important;
+  }
+
+  /* Force visibility after 8 seconds as fallback */
+  @keyframes forceVisibility {
+    to {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+  }
+
+  .hero-entrance-inactive .hero-title-entrance,
+  .hero-entrance-inactive .hero-subtitle-entrance,
+  .hero-entrance-inactive .hero-cta-entrance {
+    animation: forceVisibility 0.1s ease 8s forwards !important;
+  }
+
   /* Accessibility - Reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     .hero-entrance-active .hero-background-overlay,
@@ -609,13 +641,17 @@
     .hero-entrance-active .hero-title-part-4,
     .hero-entrance-active .hero-title-part-5,
     .hero-entrance-active .hero-subtitle-entrance,
-    .hero-entrance-active .hero-cta-entrance {
+    .hero-entrance-active .hero-cta-entrance,
+    .hero-entrance-inactive .hero-title-entrance,
+    .hero-entrance-inactive .hero-subtitle-entrance,
+    .hero-entrance-inactive .hero-cta-entrance {
       animation: none !important;
       opacity: 1 !important;
       transform: none !important;
       clip-path: none !important;
       background-size: 100% 100% !important;
       will-change: auto !important;
+      visibility: visible !important;
     }
   }
 

@@ -26,7 +26,7 @@ function App() {
     // Ativa a transição especial da Hero Section após o preloader
     setTimeout(() => {
       setHeroTransitionActive(true);
-    }, 50);
+    }, 100);
   };
 
   return (
@@ -34,7 +34,8 @@ function App() {
       <TooltipProvider>
         <Toaster />
         {showPreloader && <Preloader onComplete={handlePreloaderComplete} />}
-        <div className={heroTransitionActive ? 'hero-entrance-active' : ''}>
+        {/* Sempre renderizar o conteúdo, mas com animação quando ativo */}
+        <div className={heroTransitionActive ? 'hero-entrance-active' : 'hero-entrance-inactive'}>
           <Router />
         </div>
       </TooltipProvider>
