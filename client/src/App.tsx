@@ -19,9 +19,14 @@ function Router() {
 
 function App() {
   const [showPreloader, setShowPreloader] = useState(true);
+  const [heroTransitionActive, setHeroTransitionActive] = useState(false);
 
   const handlePreloaderComplete = () => {
     setShowPreloader(false);
+    // Ativa a transição especial da Hero Section após o preloader
+    setTimeout(() => {
+      setHeroTransitionActive(true);
+    }, 50);
   };
 
   return (
@@ -29,7 +34,9 @@ function App() {
       <TooltipProvider>
         <Toaster />
         {showPreloader && <Preloader onComplete={handlePreloaderComplete} />}
-        <Router />
+        <div className={heroTransitionActive ? 'hero-entrance-active' : ''}>
+          <Router />
+        </div>
       </TooltipProvider>
     </QueryClientProvider>
   );
