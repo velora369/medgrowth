@@ -322,28 +322,28 @@ export default function DoctorEvolutionSection() {
           </div>
         </div>
 
-        {/* Depoimentos Exclusivos - VSL Section (Compacta) */}
-        <div className="max-w-2xl mx-auto mt-12 mb-12">
-          <div className="text-center mb-6">
-            <div className="inline-flex items-center space-x-2 bg-medgrowth-cyan/10 px-3 py-1 rounded-full mb-3">
-              <TrendingUp className="w-4 h-4 text-medgrowth-cyan" />
-              <span className="text-medgrowth-cyan font-semibold text-xs">DEPOIMENTOS EXCLUSIVOS</span>
+        {/* Depoimentos Exclusivos - VSL Section (Ultra Compacta) */}
+        <div className="max-w-lg mx-auto mt-8 mb-8">
+          <div className="text-center mb-4">
+            <div className="inline-flex items-center space-x-1 bg-medgrowth-cyan/10 px-2 py-1 rounded-full mb-2">
+              <TrendingUp className="w-3 h-3 text-medgrowth-cyan" />
+              <span className="text-medgrowth-cyan font-semibold text-xs">DEPOIMENTOS</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-medgrowth-dark">
-              Médicos Compartilham Suas <span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Experiências</span>
+            <h3 className="text-lg font-bold mb-1 text-medgrowth-dark">
+              <span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Experiência Real</span>
             </h3>
           </div>
 
-          {/* VSLs Container - Compacta */}
+          {/* VSLs Container - Ultra Compacta */}
           {vslData.map((vsl, index) => (
-            <div key={vsl.id} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 p-4 mb-6 last:mb-0">
-              <div className="text-center mb-3">
-                <h4 className="text-lg font-bold text-medgrowth-dark mb-1">{vsl.doctorName}</h4>
-                <p className="text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: `"${vsl.caption}"` }} />
+            <div key={vsl.id} className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 p-3 mb-4 last:mb-0">
+              <div className="text-center mb-2">
+                <h4 className="text-base font-bold text-medgrowth-dark mb-1">{vsl.doctorName}</h4>
+                <p className="text-xs text-gray-600" dangerouslySetInnerHTML={{ __html: `"${vsl.caption}"` }} />
               </div>
               
-              {/* Wistia Video Container - Menor */}
-              <div className="relative bg-gray-100 rounded-xl overflow-hidden max-w-md mx-auto">
+              {/* Wistia Video Container - Ultra Menor */}
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden max-w-xs mx-auto">
                 <style dangerouslySetInnerHTML={{
                   __html: `
                     wistia-player[media-id='${vsl.id}']:not(:defined) { 
@@ -357,15 +357,12 @@ export default function DoctorEvolutionSection() {
                 <wistia-player media-id={vsl.id} aspect="0.5625" data-testid={`${vsl.doctorName.toLowerCase().replace(/\s+/g, '-')}-vsl-video`}></wistia-player>
               </div>
 
-              <div className="mt-3 text-center">
-                <p className="text-xs text-gray-500 mb-3">
-                  {vsl.description}
-                </p>
+              <div className="mt-2 text-center">
                 <a
                   href={`https://wa.me/5561996301406?text=${encodeURIComponent(vsl.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg transition-all duration-300"
+                  className="inline-flex items-center space-x-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:shadow-lg transition-all duration-300"
                   data-testid={`${vsl.doctorName.toLowerCase().replace(/\s+/g, '-')}-vsl-cta`}
                 >
                   <span>{vsl.ctaText}</span>
