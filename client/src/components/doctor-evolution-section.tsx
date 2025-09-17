@@ -339,7 +339,6 @@ export default function DoctorEvolutionSection() {
             <div key={vsl.id} className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 p-3 mb-4 last:mb-0">
               <div className="text-center mb-2">
                 <h4 className="text-base font-bold text-medgrowth-dark mb-1">{vsl.doctorName}</h4>
-                <p className="text-xs text-gray-600" dangerouslySetInnerHTML={{ __html: `"${vsl.caption}"` }} />
               </div>
               
               {/* Wistia Video Container - Ultra Menor */}
