@@ -361,7 +361,7 @@ export default function DoctorEvolutionSection() {
                   href={`https://wa.me/5561996301406?text=${encodeURIComponent(vsl.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:shadow-lg transition-all duration-300"
+                  className="inline-flex items-center space-x-1 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:shadow-lg transition-all duration-300 mt-[9px] mb-[9px]"
                   data-testid={`${vsl.doctorName.toLowerCase().replace(/\s+/g, '-')}-vsl-cta`}
                 >
                   <span>{vsl.ctaText}</span>
