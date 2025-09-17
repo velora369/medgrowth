@@ -135,10 +135,10 @@ export default function AboutSection() {
               href="https://wa.me/5561996301406"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center space-x-2 md:space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-6 md:px-8 py-4 rounded-xl text-base md:text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
               data-testid="about-cta-button"
             >
-              <span>Quero Minha Análise Gratuita</span>
+              <span className="whitespace-nowrap">Quero Minha Análise Gratuita</span>
             </a>
           </div>
         </div>

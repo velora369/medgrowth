@@ -98,7 +98,9 @@ export default function FinalCtaSection() {
             </div>
 
             <div className="bg-white text-medgrowth-dark p-8 rounded-2xl">
-              <h3 className="text-xl font-bold mb-6 text-center" data-testid="contact-form-title">Quero Minha Análise Gratuita Via WhatsApp</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-6 text-center" data-testid="contact-form-title">
+                <span className="whitespace-nowrap">Quero Minha Análise Gratuita</span> Via WhatsApp
+              </h3>
 
               <form onSubmit={handleSubmit} className="space-y-4" data-testid="contact-form">
                 <Input
@@ -139,11 +141,11 @@ export default function FinalCtaSection() {
                 )}
                 <Button
                   type="submit"
-                  className="w-full bg-medgrowth-cyan text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all cta-button"
+                  className="w-full bg-medgrowth-cyan text-white py-3 rounded-lg text-sm md:text-base font-semibold hover:bg-opacity-90 transition-all cta-button"
                   disabled={isSubmitting}
                   data-testid="button-submit-form"
                 >
-                  {isSubmitting ? "Enviando..." : "Quero Minha Análise Gratuita"}
+                  {isSubmitting ? "Enviando..." : <span className="whitespace-nowrap">Quero Minha Análise Gratuita</span>}
                 </Button>
               </form>
 
