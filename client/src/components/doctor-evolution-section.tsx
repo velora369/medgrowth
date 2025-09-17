@@ -6,8 +6,29 @@ import { OptimizedImage } from "@/components/ui/optimized-image";
 
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
+// Declaração de tipo para o web component da Wistia
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'wistia-player': any;
+    }
+  }
+}
+
 export default function DoctorEvolutionSection() {
   const [openChart, setOpenChart] = useState<string | null>(null);
+
+  // VSL data - preparado para escalabilidade
+  const vslData = [
+    {
+      id: "ykglhhn040",
+      doctorName: "Dra. Raquel Saraiva",
+      caption: "Como consegui +4.575 seguidores em apenas 3 meses e transformei minha presença digital",
+      description: "Descubra os métodos exatos que a Dra. Raquel utilizou para alcançar estes resultados impressionantes",
+      ctaText: "Quero Resultados Como a Dra. Raquel",
+      whatsappMessage: "Olá! Assisti o depoimento da Dra. Raquel e gostaria de saber como posso ter resultados similares!"
+    }
+  ];
 
   const doctorResults = [
     {
@@ -299,6 +320,63 @@ export default function DoctorEvolutionSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Depoimentos Exclusivos - VSL Section */}
+        <div className="max-w-4xl mx-auto mt-20 mb-16">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-2 bg-medgrowth-cyan/10 px-4 py-2 rounded-full mb-6">
+              <TrendingUp className="w-5 h-5 text-medgrowth-cyan" />
+              <span className="text-medgrowth-cyan font-semibold text-sm">DEPOIMENTOS EXCLUSIVOS</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-medgrowth-dark">
+              Médicos Compartilham Suas <span className="bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark bg-clip-text text-transparent">Experiências</span>
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Assista aos depoimentos reais de médicos que transformaram suas carreiras com nossa metodologia
+            </p>
+          </div>
+
+          {/* VSLs Container - Escalável */}
+          {vslData.map((vsl, index) => (
+            <div key={vsl.id} className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 p-8 mb-8 last:mb-0">
+              <div className="text-center mb-6">
+                <h4 className="text-2xl font-bold text-medgrowth-dark mb-2">{vsl.doctorName}</h4>
+                <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: `"${vsl.caption}"` }} />
+              </div>
+              
+              {/* Wistia Video Container */}
+              <div className="relative bg-gray-100 rounded-2xl overflow-hidden">
+                <style dangerouslySetInnerHTML={{
+                  __html: `
+                    wistia-player[media-id='${vsl.id}']:not(:defined) { 
+                      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${vsl.id}/swatch'); 
+                      display: block; 
+                      filter: blur(5px); 
+                      padding-top:177.78%; 
+                    }
+                  `
+                }} />
+                <wistia-player media-id={vsl.id} aspect="0.5625" data-testid={`${vsl.doctorName.toLowerCase().replace(/\s+/g, '-')}-vsl-video`}></wistia-player>
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-sm text-gray-500 mb-4">
+                  {vsl.description}
+                </p>
+                <a
+                  href={`https://wa.me/5561996301406?text=${encodeURIComponent(vsl.whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
+                  data-testid={`${vsl.doctorName.toLowerCase().replace(/\s+/g, '-')}-vsl-cta`}
+                >
+                  <span>{vsl.ctaText}</span>
+                  <TrendingUp className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Bottom CTA */}
