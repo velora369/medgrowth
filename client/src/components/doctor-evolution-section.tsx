@@ -27,6 +27,14 @@ export default function DoctorEvolutionSection() {
       description: "Descubra os métodos exatos que a Dra. Raquel utilizou para alcançar estes resultados impressionantes",
       ctaText: "Quero Resultados Como a Dra. Raquel",
       whatsappMessage: "Olá! Assisti o depoimento da Dra. Raquel e gostaria de saber como posso ter resultados similares!"
+    },
+    {
+      id: "wif88ivjns",
+      doctorName: "Dra. Jana",
+      caption: "Transformação completa na minha presença digital médica",
+      description: "Veja como a Dra. Jana revolucionou seu marketing digital e alcançou resultados extraordinários",
+      ctaText: "Quero Resultados Como a Dra. Jana",
+      whatsappMessage: "Olá! Assisti o depoimento da Dra. Jana e gostaria de saber como posso ter resultados similares!"
     }
   ];
 
@@ -322,9 +330,9 @@ export default function DoctorEvolutionSection() {
           </div>
         </div>
 
-        {/* Depoimentos Exclusivos - VSL Section (Ultra Compacta) */}
-        <div id="depoimentos" className="max-w-lg mx-auto mt-8 mb-8">
-          <div className="text-center mb-4">
+        {/* Depoimentos Exclusivos - VSL Section (Responsiva) */}
+        <div id="depoimentos" className="max-w-4xl mx-auto mt-8 mb-8 px-4">
+          <div className="text-center mb-6">
             <div className="inline-flex items-center space-x-1 bg-medgrowth-cyan/10 px-2 py-1 rounded-full mb-2">
               <TrendingUp className="w-3 h-3 text-medgrowth-cyan" />
               <span className="text-medgrowth-cyan font-semibold text-xs">DEPOIMENTOS</span>
@@ -334,33 +342,35 @@ export default function DoctorEvolutionSection() {
             </h3>
           </div>
 
-          {/* VSLs Container - Ultra Compacta */}
-          {vslData.map((vsl, index) => (
-            <div key={vsl.id} className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 p-3 mb-4 last:mb-0">
-              <div className="text-center mb-2">
-                <h4 className="text-base font-bold text-medgrowth-dark mb-1">{vsl.doctorName}</h4>
-              </div>
-              
-              {/* Wistia Video Container - Ultra Menor */}
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden max-w-xs mx-auto">
-                <style dangerouslySetInnerHTML={{
-                  __html: `
-                    wistia-player[media-id='${vsl.id}']:not(:defined) { 
-                      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${vsl.id}/swatch'); 
-                      display: block; 
-                      filter: blur(5px); 
-                      padding-top:177.78%; 
-                    }
-                  `
-                }} />
-                <wistia-player media-id={vsl.id} aspect="0.5625" data-testid={`${vsl.doctorName.toLowerCase().replace(/\s+/g, '-')}-vsl-video`}></wistia-player>
-              </div>
-
-              <div className="mt-2 text-center">
+          {/* VSLs Container - Grid Responsivo para dois vídeos lado a lado */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {vslData.map((vsl, index) => (
+              <div key={vsl.id} className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 p-3">
+                <div className="text-center mb-2">
+                  <h4 className="text-base font-bold text-medgrowth-dark mb-1">{vsl.doctorName}</h4>
+                </div>
                 
+                {/* Wistia Video Container - Tamanhos iguais e responsivos */}
+                <div className="relative bg-gray-100 rounded-lg overflow-hidden w-full">
+                  <style dangerouslySetInnerHTML={{
+                    __html: `
+                      wistia-player[media-id='${vsl.id}']:not(:defined) { 
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${vsl.id}/swatch'); 
+                        display: block; 
+                        filter: blur(5px); 
+                        padding-top:177.78%; 
+                      }
+                    `
+                  }} />
+                  <wistia-player media-id={vsl.id} aspect="0.5625" data-testid={`${vsl.doctorName.toLowerCase().replace(/\s+/g, '-')}-vsl-video`}></wistia-player>
+                </div>
+
+                <div className="mt-2 text-center">
+                  
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA */}
