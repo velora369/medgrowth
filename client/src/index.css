@@ -706,11 +706,10 @@
     display: inline-block;
   }
 
-  /* Mobile-specific fixes - remove transforms to avoid WebKit bug */
+  /* Mobile-specific fixes - simplified and robust */
   @media screen and (max-width: 768px) {
     .hero-entrance-active .hero-title-part-4 {
       transform: none !important;
-      background-size: 100% 100% !important;
       animation: fadeInMobile 0.8s ease-out 0.8s forwards;
     }
     
@@ -719,35 +718,51 @@
       to { opacity: 1; }
     }
 
-    /* Show fallback text on mobile if gradient fails */
-    .hero-gradient-fallback {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #35ccdb;
-      z-index: 0;
-      pointer-events: none;
-    }
-    
+    /* Mobile gradient wrapper - simplified layout */
     .hero-gradient-wrapper {
       position: relative;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    /* Hide fallback by default on mobile */
+    .hero-gradient-fallback {
+      display: none;
+    }
+    
+    /* Mobile-optimized gradient text */
+    .gradient-text-bright {
+      display: inline-block;
+      background: linear-gradient(90deg, #35ccdb 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: 1.2;
+      /* Forçar hardware acceleration para melhor renderização */
+      will-change: transform;
+      transform: translateZ(0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   }
 
-  /* Extra safety for iOS old versions: fully bypass gradient on mobile */
-  @supports (-webkit-touch-callout: none) {
-    @media (max-width: 768px) {
-      .hero-gradient-wrapper .gradient-text {
-        -webkit-text-fill-color: currentColor;
+  /* Extra safety for older mobile browsers */
+  @media screen and (max-width: 768px) {
+    /* Additional fallback for devices that don't support gradients well */
+    @supports not (-webkit-background-clip: text) {
+      .gradient-text-bright {
+        -webkit-text-fill-color: #35ccdb;
         color: #35ccdb;
-        background: none;
+        background: none !important;
       }
-      
-      /* Hide fallback when gradient is disabled */
-      .hero-gradient-fallback {
-        display: none;
-      }
+    }
+    
+    /* Force color for very old browsers */
+    .hero-gradient-wrapper {
+      color: #35ccdb;
     }
   }
 
