@@ -672,23 +672,17 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Dual-layer fallback system for gradient text */
+  /* Simplified gradient text with better mobile support */
   .hero-gradient-wrapper {
-    position: relative;
     display: inline-block;
   }
   
   .hero-gradient-fallback {
-    position: absolute;
-    inset: 0;
-    color: #1a365d;
-    z-index: 0;
-    pointer-events: none;
+    display: none; /* Hidden by default */
   }
   
   .hero-gradient-wrapper .gradient-text {
-    position: relative;
-    z-index: 1;
+    display: inline-block;
   }
 
   /* Mobile-specific fixes - remove transforms to avoid WebKit bug */
@@ -703,6 +697,21 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    /* Show fallback text on mobile if gradient fails */
+    .hero-gradient-fallback {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #35ccdb;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .hero-gradient-wrapper {
+      position: relative;
+    }
   }
 
   /* Extra safety for iOS old versions: fully bypass gradient on mobile */
@@ -710,8 +719,13 @@
     @media (max-width: 768px) {
       .hero-gradient-wrapper .gradient-text {
         -webkit-text-fill-color: currentColor;
-        color: #1a365d;
+        color: #35ccdb;
         background: none;
+      }
+      
+      /* Hide fallback when gradient is disabled */
+      .hero-gradient-fallback {
+        display: none;
       }
     }
   }
