@@ -588,17 +588,14 @@
     0% {
       opacity: 0;
       transform: translateY(50px) scale(0.8);
-      box-shadow: 0 0 0 rgba(53, 204, 219, 0);
     }
     70% {
       opacity: 0.9;
       transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 10px 30px rgba(53, 204, 219, 0.3);
     }
     100% {
       opacity: 1;
       transform: translateY(0) scale(1);
-      box-shadow: 0 4px 15px rgba(53, 204, 219, 0.2);
     }
   }
 
