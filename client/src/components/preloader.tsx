@@ -11,7 +11,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onComplete, 500); // Aguarda a animação de saída
-    }, 4000); // Preloader fica visível por 4 segundos
+    }, 2000); // Preloader fica visível por 2 segundos
 
     return () => clearTimeout(timer);
   }, [onComplete]);

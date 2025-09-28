@@ -25,16 +25,16 @@ export default function HeroSection() {
       
       <div className="hero-background-overlay"></div>
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight hero-title-entrance" data-testid="hero-title">
-          <span className="text-medgrowth-dark hero-title-part-1">MedGrowth:</span> <span className="hero-title-part-2">Sua Jornada para o<br /></span>
-          <span className="text-medgrowth-dark hero-title-part-3">Sucesso </span><span className="hero-gradient-wrapper hero-title-part-4">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight hero-title-entrance text-white" data-testid="hero-title">
+          <span className="text-medgrowth-cyan hero-title-part-1">MedGrowth:</span> <span className="hero-title-part-2">Sua Jornada para o<br /></span>
+          <span className="text-medgrowth-cyan hero-title-part-3">Sucesso </span><span className="hero-gradient-wrapper hero-title-part-4">
             <span className="hero-gradient-fallback" aria-hidden="true">Digital</span>
-            <span className="gradient-text">Digital</span>
+            <span className="gradient-text-bright">Digital</span>
           </span> <span className="hero-title-part-5">Começa Aqui</span>
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed font-medium hero-subtitle-entrance" data-testid="hero-subtitle">
-          Cansado de pacotes prontos? Nós criamos estratégias personalizadas para você focar no que realmente importa: <strong className="text-medgrowth-dark">seus pacientes</strong>.
+        <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed font-medium hero-subtitle-entrance" data-testid="hero-subtitle">
+          Cansado de pacotes prontos? Nós criamos estratégias personalizadas para você focar no que realmente importa: <strong className="text-medgrowth-cyan">seus pacientes</strong>.
         </p>
 
         <div className="hero-cta-entrance">

@@ -676,6 +676,23 @@
     position: relative; /* Garante que o elemento tenha posicionamento adequado */
   }
 
+  /* Bright gradient text for better contrast on dark backgrounds */
+  .gradient-text-bright {
+    display: inline-block;
+    background-image: linear-gradient(90deg, #35ccdb, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.4;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.1em;
+    position: relative;
+  }
+
   /* Simplified gradient text with better mobile support */
   .hero-gradient-wrapper {
     display: inline-block;
