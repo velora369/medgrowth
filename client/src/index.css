@@ -668,8 +668,12 @@
     color: transparent;
     backface-visibility: hidden;
     transform: translateZ(0);
-    contain: paint;
     -webkit-font-smoothing: antialiased;
+    /* Removido contain: paint para evitar corte de letras com descender */
+    line-height: 1.4; /* Aumentado para garantir espaço extra para descenders */
+    padding-bottom: 0.2em; /* Aumentado padding para garantir que descenders não sejam cortados */
+    margin-bottom: 0.1em; /* Adiciona margem inferior para compensar qualquer overflow */
+    position: relative; /* Garante que o elemento tenha posicionamento adequado */
   }
 
   /* Simplified gradient text with better mobile support */
