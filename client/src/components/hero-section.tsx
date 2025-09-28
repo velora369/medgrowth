@@ -2,7 +2,27 @@ import { TrendingUp } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="hero-video-bg min-h-screen flex items-center justify-center hero-section-container">
+    <section id="home" className="hero-video-bg min-h-screen flex items-center justify-center hero-section-container relative overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        data-testid="hero-background-video"
+        poster="https://res.cloudinary.com/dnnf92lm4/image/upload/v1759087403/5406015-poster.jpg"
+      >
+        <source 
+          src="https://res.cloudinary.com/dnnf92lm4/video/upload/v1759087403/5406015-uhd_3840_2160_25fps_bzurqu.mp4" 
+          type="video/mp4" 
+        />
+        {/* Fallback for browsers that don't support video */}
+        <div className="absolute inset-0 bg-gradient-to-br from-medgrowth-cyan to-medgrowth-dark"></div>
+      </video>
+      
       <div className="hero-background-overlay"></div>
       <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight hero-title-entrance" data-testid="hero-title">
