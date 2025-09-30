@@ -1,19 +1,62 @@
 import { TrendingUp } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Força o play do vídeo para mobile
+      const playVideo = async () => {
+        try {
+          await video.play();
+        } catch (error) {
+          console.log("Autoplay prevented, will retry on user interaction");
+        }
+      };
+      
+      playVideo();
+
+      // Garante que o vídeo continue em loop
+      const handleEnded = () => {
+        video.currentTime = 0;
+        video.play();
+      };
+
+      video.addEventListener('ended', handleEnded);
+      
+      // Tenta dar play se o vídeo pausar inesperadamente
+      const handlePause = () => {
+        if (video.paused && !video.ended) {
+          video.play();
+        }
+      };
+
+      video.addEventListener('pause', handlePause);
+
+      return () => {
+        video.removeEventListener('ended', handleEnded);
+        video.removeEventListener('pause', handlePause);
+      };
+    }
+  }, []);
+
   return (
     <section id="home" className="hero-video-bg min-h-screen flex items-center justify-center hero-section-container relative overflow-hidden">
       {/* Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover z-0"
         data-testid="hero-background-video"
         poster="https://res.cloudinary.com/dnnf92lm4/image/upload/v1759087403/5406015-poster.jpg"
+        webkit-playsinline="true"
       >
         <source 
           src="https://res.cloudinary.com/dnnf92lm4/video/upload/v1759087403/5406015-uhd_3840_2160_25fps_bzurqu.mp4" 
