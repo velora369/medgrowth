@@ -58,8 +58,8 @@ export default function Header() {
             <OptimizedImage
               src="https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/08/logo-principal-sem-fundo.webp"
               alt="MedGrowth - Marketing Digital para Médicos - Logo principal"
-              className="h-7 w-auto cursor-pointer hover:opacity-80 transition-opacity duration-200"
-              height={28}
+              className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity duration-200"
+              height={48}
               priority={true}
               placeholder={false}
               onClick={() => handleNavClick("#home")}
