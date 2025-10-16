@@ -6,40 +6,70 @@ export default function HeroSection() {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (video) {
-      // Força o play do vídeo para mobile
-      const playVideo = async () => {
-        try {
-          await video.play();
-        } catch (error) {
-          console.log("Autoplay prevented, will retry on user interaction");
-        }
-      };
-      
+    if (!video) return;
+
+    // Configurações para garantir loop contínuo
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.muted = true;
+    video.loop = true;
+
+    // Função para forçar o play
+    const playVideo = async () => {
+      try {
+        video.muted = true; // Garante que está muted antes de dar play
+        await video.play();
+      } catch (error) {
+        console.log("Autoplay prevented:", error);
+      }
+    };
+
+    // Inicia o vídeo
+    playVideo();
+
+    // Garante loop manual caso o atributo loop falhe
+    const handleEnded = () => {
+      video.currentTime = 0;
       playVideo();
+    };
 
-      // Garante que o vídeo continue em loop
-      const handleEnded = () => {
-        video.currentTime = 0;
-        video.play();
-      };
-
-      video.addEventListener('ended', handleEnded);
-      
-      // Tenta dar play se o vídeo pausar inesperadamente
-      const handlePause = () => {
-        if (video.paused && !video.ended) {
-          video.play();
+    // Retoma o vídeo se pausar (exceto se for manualmente pausado)
+    const handlePause = () => {
+      // Pequeno delay para evitar conflito com o evento ended
+      setTimeout(() => {
+        if (video.paused && !video.ended && document.visibilityState === 'visible') {
+          playVideo();
         }
-      };
+      }, 100);
+    };
 
-      video.addEventListener('pause', handlePause);
+    // Retoma quando a aba/janela fica visível novamente
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible' && video.paused) {
+        playVideo();
+      }
+    };
 
-      return () => {
-        video.removeEventListener('ended', handleEnded);
-        video.removeEventListener('pause', handlePause);
-      };
-    }
+    // Retoma em eventos de toque/click (necessário em alguns mobiles)
+    const handleInteraction = () => {
+      if (video.paused) {
+        playVideo();
+      }
+    };
+
+    video.addEventListener('ended', handleEnded);
+    video.addEventListener('pause', handlePause);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener('touchstart', handleInteraction, { once: true });
+    document.addEventListener('click', handleInteraction, { once: true });
+
+    return () => {
+      video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('pause', handlePause);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      document.removeEventListener('touchstart', handleInteraction);
+      document.removeEventListener('click', handleInteraction);
+    };
   }, []);
 
   return (
@@ -56,7 +86,6 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover z-0"
         data-testid="hero-background-video"
         poster="https://res.cloudinary.com/dnnf92lm4/image/upload/v1759087403/5406015-poster.jpg"
-        webkit-playsinline="true"
       >
         <source 
           src="https://res.cloudinary.com/dnnf92lm4/video/upload/v1759087403/5406015-uhd_3840_2160_25fps_bzurqu.mp4" 
