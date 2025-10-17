@@ -120,7 +120,7 @@ export default function Header() {
           <div className="flex items-center justify-end">
             {/* WhatsApp CTA Button - Desktop Only */}
             <a
-              href="https://wa.me/5561996301406"
+              href="https://wa.me/5511933719086"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center space-x-2 bg-medgrowth-cyan text-white px-6 py-3 rounded-full hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium text-sm"
@@ -231,7 +231,7 @@ export default function Header() {
           <div className="mt-auto space-y-4">
             {/* CTA Button */}
             <a
-              href="https://wa.me/5561996301406"
+              href="https://wa.me/5511933719086"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-3 bg-medgrowth-cyan text-white px-6 py-4 rounded-2xl font-semibold text-lg hover:bg-medgrowth-cyan/90 hover:shadow-lg hover:scale-105 transition-all duration-300 group"
@@ -244,7 +244,7 @@ export default function Header() {
             {/* Social Icons */}
             <div className="flex justify-center space-x-8 pt-4 border-t border-gray-100">
               <a
-                href="https://wa.me/5561996301406"
+                href="https://wa.me/5511933719086"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-medgrowth-cyan/10 hover:bg-medgrowth-cyan transition-all duration-300 group"

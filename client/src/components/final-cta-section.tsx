@@ -32,7 +32,7 @@ export default function FinalCtaSection() {
       );
       
       // Redirect to WhatsApp
-      window.open(`https://wa.me/5561996301406?text=${whatsappMessage}`, "_blank");
+      window.open(`https://wa.me/5511933719086?text=${whatsappMessage}`, "_blank");
       
       toast({
         title: "Redirecionando para o WhatsApp!",

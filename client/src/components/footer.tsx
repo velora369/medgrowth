@@ -80,7 +80,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <div className="text-gray-800 font-medium">Atendimento 24h</div>
               <a
-                href="https://wa.me/5561996301406"
+                href="https://wa.me/5511933719086"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-medgrowth-cyan transition-all duration-300 cursor-pointer group"

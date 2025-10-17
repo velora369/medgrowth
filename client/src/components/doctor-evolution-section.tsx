@@ -311,7 +311,7 @@ export default function DoctorEvolutionSection() {
                             </div>
                             <div className="text-center md:text-right">
                               <a
-                                href="https://wa.me/5561996301406?text=Olá! Vi os gráficos de crescimento e gostaria de resultados assim para meu consultório!"
+                                href="https://wa.me/5511933719086?text=Olá! Vi os gráficos de crescimento e gostaria de resultados assim para meu consultório!"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-4 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-base font-semibold hover:shadow-lg transition-all duration-300"
@@ -384,7 +384,7 @@ export default function DoctorEvolutionSection() {
             </p>
           </div>
           <a
-            href="https://wa.me/5561996301406?text=Olá! Vi os resultados incríveis dos médicos nas redes sociais e gostaria de uma análise gratuita!"
+            href="https://wa.me/5511933719086?text=Olá! Vi os resultados incríveis dos médicos nas redes sociais e gostaria de uma análise gratuita!"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
