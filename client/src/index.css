@@ -479,56 +479,58 @@
     transition: all 0.3s ease;
   }
 
-  /* Título - animação de montagem palavra por palavra */
-  .hero-entrance-active .hero-title-part-1 {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-    animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
-  }
+  /* Desktop-only: Complex animations (min-width: 769px) */
+  @media screen and (min-width: 769px) {
+    /* Título - animação de montagem palavra por palavra */
+    .hero-entrance-active .hero-title-part-1 {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
+    }
 
-  .hero-entrance-active .hero-title-part-2 {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-    animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.4s forwards;
-  }
+    .hero-entrance-active .hero-title-part-2 {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.4s forwards;
+    }
 
-  .hero-entrance-active .hero-title-part-3 {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-    animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
-  }
+    .hero-entrance-active .hero-title-part-3 {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
+    }
 
-  .hero-entrance-active .hero-title-part-4 {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-    background-size: 0% 100%;
-    background-position: left center;
-    /* Fallback para WebKit mobile */
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.8s forwards,
-               gradientReveal 1.2s ease-out 1.0s forwards;
-  }
+    .hero-entrance-active .hero-title-part-4 {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      background-size: 0% 100%;
+      background-position: left center;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.8s forwards,
+                 gradientReveal 1.2s ease-out 1.0s forwards;
+    }
 
-  .hero-entrance-active .hero-title-part-5 {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-    animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 1.0s forwards;
-  }
+    .hero-entrance-active .hero-title-part-5 {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      animation: heroTitlePartEnter 0.8s cubic-bezier(0.23, 1, 0.32, 1) 1.0s forwards;
+    }
 
-  /* Subtítulo - animação de desdobramento */
-  .hero-entrance-active .hero-subtitle-entrance {
-    opacity: 0;
-    transform: translateY(40px);
-    clip-path: inset(100% 0 0 0);
-    animation: heroSubtitleUnfold 1s cubic-bezier(0.23, 1, 0.32, 1) 1.4s forwards;
-  }
+    /* Subtítulo - animação de desdobramento */
+    .hero-entrance-active .hero-subtitle-entrance {
+      opacity: 0;
+      transform: translateY(40px);
+      clip-path: inset(100% 0 0 0);
+      animation: heroSubtitleUnfold 1s cubic-bezier(0.23, 1, 0.32, 1) 1.4s forwards;
+    }
 
-  /* CTA - animação de materialização */
-  .hero-entrance-active .hero-cta-entrance {
-    opacity: 0;
-    transform: translateY(50px) scale(0.8);
-    animation: heroCTAMaterialize 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s forwards;
+    /* CTA - animação de materialização */
+    .hero-entrance-active .hero-cta-entrance {
+      opacity: 0;
+      transform: translateY(50px) scale(0.8);
+      animation: heroCTAMaterialize 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s forwards;
+    }
   }
 
   /* Keyframes para as animações */
@@ -703,16 +705,68 @@
     display: inline-block;
   }
 
-  /* Mobile-specific fixes - simplified and robust */
+  /* Mobile-specific optimizations - lightweight and smooth */
   @media screen and (max-width: 768px) {
-    .hero-entrance-active .hero-title-part-4 {
-      transform: none !important;
-      animation: fadeInMobile 0.8s ease-out 0.8s forwards;
+    /* Simplify all hero animations for mobile performance */
+    .hero-entrance-active .hero-background-overlay {
+      animation: heroMobileFadeIn 0.6s ease-out forwards;
+    }
+
+    /* All title parts fade in together - no delays, no scale, no clip-path */
+    .hero-entrance-active .hero-title-part-1,
+    .hero-entrance-active .hero-title-part-2,
+    .hero-entrance-active .hero-title-part-3,
+    .hero-entrance-active .hero-title-part-4,
+    .hero-entrance-active .hero-title-part-5 {
+      opacity: 0;
+      transform: translateY(15px);
+      animation: heroMobileFadeIn 0.5s ease-out 0.1s forwards;
+      will-change: opacity;
+    }
+
+    /* Subtitle - simple fade, no clip-path */
+    .hero-entrance-active .hero-subtitle-entrance {
+      opacity: 0;
+      transform: translateY(15px);
+      clip-path: none;
+      animation: heroMobileFadeIn 0.5s ease-out 0.3s forwards;
+      will-change: opacity;
+    }
+
+    /* CTA - simple fade, no scale */
+    .hero-entrance-active .hero-cta-entrance {
+      opacity: 0;
+      transform: translateY(15px);
+      animation: heroMobileFadeIn 0.5s ease-out 0.5s forwards;
+      will-change: opacity;
+    }
+
+    /* Simple mobile fade-in keyframe - only opacity and minimal translateY */
+    @keyframes heroMobileFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Remove heavy will-change after animations complete */
+    .hero-entrance-active .hero-title-part-1,
+    .hero-entrance-active .hero-title-part-2,
+    .hero-entrance-active .hero-title-part-3,
+    .hero-entrance-active .hero-title-part-4,
+    .hero-entrance-active .hero-title-part-5,
+    .hero-entrance-active .hero-subtitle-entrance,
+    .hero-entrance-active .hero-cta-entrance {
+      animation-fill-mode: forwards;
     }
     
-    @keyframes fadeInMobile {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* Remove gradient animation complexity on mobile */
+    .hero-entrance-active .hero-title-part-4 {
+      background-size: 100% 100%;
     }
 
     /* Mobile gradient wrapper - simplified layout */
