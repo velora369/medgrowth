@@ -25,7 +25,7 @@ export default function PortfolioSection() {
       specialty: "Radiologia",
       description: "Site institucional para centro de diagnósticos por imagem",
       image: "https://yungwizzeprod2.wordpress.com/wp-content/uploads/2025/09/captura-de-tela-2025-09-05-as-19.25.48.webp",
-      link: "https://cevidadiagnosticos.netlify.app/"
+      link: "https://cevidadiagnosticos.com.br/"
     },
     {
       id: 4,
