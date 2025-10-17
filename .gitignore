@@ -5,3 +5,11 @@ build/
 *.log
 .vscode/
 .DS_Store
+build/
+dist/
+.DS_Store
+.env
+*.log
+.next/
+node_modules/
+.vscode/
