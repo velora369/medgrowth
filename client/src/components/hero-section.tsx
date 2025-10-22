@@ -8,67 +8,118 @@ export default function HeroSection() {
     const video = videoRef.current;
     if (!video) return;
 
-    // Configurações para garantir loop contínuo
+    // Configurações agressivas para NUNCA permitir pause
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('x5-playsinline', '');
+    video.setAttribute('x5-video-player-type', 'h5');
+    video.setAttribute('x5-video-player-fullscreen', 'false');
     video.muted = true;
     video.loop = true;
+    video.defaultMuted = true;
+    video.autoplay = true;
 
-    // Função para forçar o play
-    const playVideo = async () => {
+    // Função AGRESSIVA para forçar o play
+    const forcePlay = async () => {
       try {
-        video.muted = true; // Garante que está muted antes de dar play
-        await video.play();
+        video.muted = true;
+        video.defaultMuted = true;
+        
+        if (video.paused) {
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            await playPromise;
+          }
+        }
       } catch (error) {
-        console.log("Autoplay prevented:", error);
+        // Tenta novamente em 100ms se falhar
+        setTimeout(forcePlay, 100);
       }
     };
 
-    // Inicia o vídeo
-    playVideo();
+    // VIGILANTE PERMANENTE: Verifica a cada 500ms se o vídeo está tocando
+    const watchdog = setInterval(() => {
+      if (video.paused || video.ended) {
+        video.currentTime = video.currentTime > 0 ? video.currentTime : 0;
+        forcePlay();
+      }
+    }, 500);
+
+    // Inicia o vídeo imediatamente
+    forcePlay();
+
+    // BLOQUEIA qualquer tentativa de pause
+    const preventPause = (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      forcePlay();
+      return false;
+    };
 
     // Garante loop manual caso o atributo loop falhe
     const handleEnded = () => {
       video.currentTime = 0;
-      playVideo();
-    };
-
-    // Retoma o vídeo se pausar (exceto se for manualmente pausado)
-    const handlePause = () => {
-      // Pequeno delay para evitar conflito com o evento ended
-      setTimeout(() => {
-        if (video.paused && !video.ended && document.visibilityState === 'visible') {
-          playVideo();
-        }
-      }, 100);
+      forcePlay();
     };
 
     // Retoma quando a aba/janela fica visível novamente
     const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible' && video.paused) {
-        playVideo();
+      if (document.visibilityState === 'visible') {
+        forcePlay();
       }
     };
 
-    // Retoma em eventos de toque/click (necessário em alguns mobiles)
+    // Retoma em QUALQUER interação
     const handleInteraction = () => {
-      if (video.paused) {
-        playVideo();
-      }
+      forcePlay();
     };
 
-    video.addEventListener('ended', handleEnded);
-    video.addEventListener('pause', handlePause);
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    document.addEventListener('touchstart', handleInteraction, { once: true });
-    document.addEventListener('click', handleInteraction, { once: true });
+    // Intersection Observer para forçar play quando visível
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          forcePlay();
+        }
+      });
+    }, { threshold: 0.1 });
 
+    observer.observe(video);
+
+    // Event listeners MÚLTIPLOS para garantir que NUNCA pause
+    video.addEventListener('pause', preventPause, true);
+    video.addEventListener('ended', handleEnded);
+    video.addEventListener('suspend', forcePlay);
+    video.addEventListener('abort', forcePlay);
+    video.addEventListener('emptied', forcePlay);
+    video.addEventListener('stalled', forcePlay);
+    video.addEventListener('waiting', forcePlay);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener('touchstart', handleInteraction);
+    document.addEventListener('touchend', handleInteraction);
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('scroll', handleInteraction);
+    window.addEventListener('focus', handleInteraction);
+    window.addEventListener('blur', forcePlay);
+
+    // Cleanup
     return () => {
+      clearInterval(watchdog);
+      observer.disconnect();
+      video.removeEventListener('pause', preventPause, true);
       video.removeEventListener('ended', handleEnded);
-      video.removeEventListener('pause', handlePause);
+      video.removeEventListener('suspend', forcePlay);
+      video.removeEventListener('abort', forcePlay);
+      video.removeEventListener('emptied', forcePlay);
+      video.removeEventListener('stalled', forcePlay);
+      video.removeEventListener('waiting', forcePlay);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       document.removeEventListener('touchstart', handleInteraction);
+      document.removeEventListener('touchend', handleInteraction);
       document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('focus', handleInteraction);
+      window.removeEventListener('blur', forcePlay);
     };
   }, []);
 
