@@ -162,7 +162,7 @@ export default function HeroSection() {
 
         <div className="hero-cta-entrance">
           <a
-            href="https://wa.me/5511933719086?text=Olá,%20gostaria%20da%20minha%20análise%20gratuita"
+            href="https://wa.me/5561996301406?text=Olá,%20gostaria%20da%20minha%20análise%20gratuita"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 md:space-x-3 bg-gradient-to-r from-medgrowth-cyan to-medgrowth-dark text-white px-6 md:px-10 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-bold hover:scale-105 transition-all duration-300"
